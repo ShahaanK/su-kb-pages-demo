@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{#
+  Per-page head injection for LLM/crawler optimization.
+  Reads frontmatter via page.meta. All values string-coerced before tojson
+  so a YAML date object can never break the build.
+#}
+{% block extrahead %}
+  {{ super() }}
+  {% if page and page.canonical_url %}
+
+    {# Markdown twin for agent / skill consumers (written by scripts/mirror_markdown.py) #}
+    <link rel="alternate" type="text/markdown" href="{{ page.canonical_url }}index.md" />
+
+    {# Per-page robots directive; default is fully indexable #}
+    <meta name="robots" content="{{ page.meta.get('robots', 'index, follow, max-snippet:-1, max-image-preview:large') | string }}" />
+
+    {% set _title = page.meta.get('title', page.title) | string %}
+    {% set _desc = (page.meta.get('ai_description') or page.meta.get('description') or '') | string %}
+    {% set _published = page.meta.get('date', '') | string %}
+    {% set _modified = page.meta.get('lastmod', '') | string %}
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "headline": {{ _title | tojson }},
+      "description": {{ _desc | tojson }},
+      {% if _published %}"datePublished": {{ _published | tojson }},{% endif %}
+      {% if _modified %}"dateModified": {{ _modified | tojson }},{% endif %}
+      "inLanguage": "en",
+      "url": {{ page.canonical_url | tojson }},
+      "author": {
+        "@type": "Organization",
+        "name": "Syracuse University Information Technology Services"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Syracuse University Information Technology Services"
+      }
+    }
+    </script>
+  {% endif %}
+{% endblock %}

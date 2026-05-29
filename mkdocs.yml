@@ -1,0 +1,67 @@
+# mkdocs.yml -- su-kb-pages-demo
+# Publish half of the SU AI Knowledge-Base pipeline.
+# Ingest half (Confluence -> Markdown) writes into docs/ ; MkDocs renders it.
+#
+# IMPORTANT: kept as plain YAML (no !!python/ tags) so the build scripts
+# in scripts/ can safe_load this file. Do not add emoji/python-tag extensions
+# without also updating the scripts.
+
+site_name: Syracuse University ITS -- AI Knowledge Base
+site_description: >-
+  Documentation for Syracuse University ITS AI tools, services, and policies.
+  Mirrored from Confluence, published for humans and machine readers.
+
+# CHANGE THIS to your GitHub Pages URL before first deploy:
+#   https://<your-username>.github.io/su-kb-pages-demo/
+site_url: https://EXAMPLE.github.io/su-kb-pages-demo/
+
+# Demo content is sample/placeholder; real content comes from Confluence ingest.
+copyright: Syracuse University Information Technology Services
+
+theme:
+  name: material
+  custom_dir: overrides
+  language: en
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.path
+    - navigation.top
+    - navigation.indexes
+    - content.code.copy
+    - search.suggest
+    - search.highlight
+  palette:
+    scheme: default        # color is overridden in assets/css/syr.css
+  font:
+    text: Roboto
+    code: Roboto Mono
+
+extra_css:
+  - assets/css/syr.css
+
+plugins:
+  - search
+  # NOTE: llms.txt / llms-full.txt / per-page .md mirrors are produced by the
+  # scripts in scripts/ (run after `mkdocs build`), not by a plugin, so the
+  # build has no dependency beyond mkdocs-material. To switch to the plugin
+  # later, `pip install mkdocs-llmstxt` and add a `- llmstxt:` block here.
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+
+nav:
+  - Overview: index.md
+  - AI Tools:
+      - Claude at Syracuse: ai-tools/claude.md
+      - ChatGPT and Copilot: ai-tools/chatgpt.md

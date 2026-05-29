@@ -1,0 +1,8 @@
+# Publish-half dependencies for su-kb-pages-demo.
+# The llms.txt / llms-full.txt / .md-twin generation is hand-rolled in
+# scripts/ , so the only hard dependency is mkdocs-material (which pulls in
+# mkdocs + pyyaml + pymdown-extensions).
+mkdocs-material>=9.7,<10
+
+# Optional swap-in if you prefer plugin-generated llms.txt over the scripts:
+# mkdocs-llmstxt>=0.2

@@ -1,0 +1,37 @@
+/* syr.css -- clementine.syr.edu-inspired starter (Phase 0 STUB)
+   This is intentionally minimal. Phase 1 replaces these values with the
+   real palette/type extracted from clementine.syr.edu. Do not treat the
+   exact hex values here as final brand colors. */
+
+:root {
+  /* Syracuse Orange (Pantone 1665, approx) as the Material primary */
+  --md-primary-fg-color:        #F76900;
+  --md-primary-fg-color--light: #FF8A33;
+  --md-primary-fg-color--dark:  #C45200;
+
+  /* Accent used for links/hover */
+  --md-accent-fg-color:         #C45200;
+
+  /* SU secondary navy, used sparingly */
+  --su-navy: #000E54;
+}
+
+/* Header bar */
+.md-header {
+  background-color: var(--md-primary-fg-color);
+}
+
+/* Footer tone-down to navy for contrast against the orange header */
+.md-footer {
+  background-color: var(--su-navy);
+}
+
+/* Link color in body content */
+.md-typeset a {
+  color: var(--md-accent-fg-color);
+}
+
+/* Tab bar */
+.md-tabs {
+  background-color: var(--md-primary-fg-color--dark);
+}

@@ -1,0 +1,60 @@
+name: Deploy MkDocs site
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow one concurrent deployment; cancel in-progress runs on new pushes.
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Build site
+        run: mkdocs build --strict
+        # --strict fails the build on broken links / unresolved wikilinks,
+        # which is exactly the gate we want before going live. The scaffold
+        # passes strict; if real ingested content introduces an unresolved
+        # wikilink, this step will (correctly) fail until it is fixed.
+
+      - name: Generate llms.txt and llms-full.txt
+        run: python scripts/gen_llms.py --docs docs --site site --config mkdocs.yml
+
+      - name: Mirror per-page Markdown twins
+        run: python scripts/mirror_markdown.py --docs docs --site site
+
+      - name: Disable Jekyll post-processing
+        run: touch site/.nojekyll
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

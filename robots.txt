@@ -1,0 +1,52 @@
+# robots.txt for su-kb-pages-demo
+# Posture: public university knowledge base -- maximize visibility to AI bots.
+# Last reviewed: 2026-05
+
+# --- Training crawlers (update model weights) ---
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+# --- Search / RAG crawlers (cite back to humans) ---
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# --- Documented non-compliant crawler ---
+User-agent: Bytespider
+Disallow: /
+
+# --- Everyone else ---
+User-agent: *
+Allow: /
+
+# CHANGE the host before deploy to match site_url in mkdocs.yml
+Sitemap: https://EXAMPLE.github.io/su-kb-pages-demo/sitemap.xml
