@@ -1,0 +1,1 @@
+<!-- Placeholder. Real file is generated post-build by scripts/gen_llms.py and overwrites this in site/. Exists so the homepage link resolves and `mkdocs build --strict` stays clean. -->
