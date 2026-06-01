@@ -60,8 +60,5 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
 
-nav:
-  - Overview: index.md
-  - AI Tools:
-      - Claude at Syracuse: ai-tools/claude.md
-      - ChatGPT and Copilot: ai-tools/chatgpt.md
+# nav: removed -- MkDocs auto-generates from docs/ file tree.
+# Hardcoded nav breaks when ai-tools/ placeholders are replaced by itsai/ pages.
