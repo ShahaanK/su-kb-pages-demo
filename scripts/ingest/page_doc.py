@@ -34,20 +34,58 @@ class PageDoc:
     lastmod: str = ""               # ISO modified date, drives sitemap lastmod
     authors: list[str] = field(default_factory=list)
     tags: list[str] = field(default_factory=list)
-    visibility_signal: str = "public"   # public | restricted | unknown
+    visibility_signal: str = "public"   # public | restricted | excluded | unknown
     robots: str = "index, follow"
+
+    # Hierarchy fields -- set by run_ingest after the full page list is built.
+    # Raw Confluence ancestor IDs (root-first), set by adapter._convert_page.
+    raw_ancestor_ids: list[str] = field(default_factory=list)
+    # Filtered path components (published phantom-section slugs only), root-first.
+    # Set by run_ingest._build_hierarchy; used by rel_path().
+    ancestor_slugs: list[str] = field(default_factory=list)
+    # True if this page is written as <folder>/index.md (hub or space root).
+    is_section_index: bool = False
+    # True for the space root page (writes to itsai/index.md, not itsai/<slug>/index.md).
+    is_space_root: bool = False
 
     def slug(self) -> str:
         return slugify(self.title)
 
     def rel_path(self) -> Path:
-        """docs-relative path, e.g. itsai/claude-at-syracuse.md"""
-        return Path(slugify(self.space)) / f"{self.slug()}.md"
+        """docs-relative path respecting hierarchy fields.
+
+        Rules (applied in order):
+          is_space_root                    -> itsai/index.md
+          is_section_index, no ancestors   -> itsai/<slug>/index.md
+          is_section_index, with ancestors -> itsai/<ancestors>/<slug>/index.md
+          leaf, no ancestors               -> itsai/<slug>.md
+          leaf, with ancestors             -> itsai/<ancestors>/<slug>.md
+        """
+        base = Path(slugify(self.space))
+        if self.is_space_root:
+            return base / "index.md"
+        if not self.ancestor_slugs:
+            if self.is_section_index:
+                return base / self.slug() / "index.md"
+            return base / f"{self.slug()}.md"
+        parent = base.joinpath(*self.ancestor_slugs)
+        if self.is_section_index:
+            return parent / self.slug() / "index.md"
+        return parent / f"{self.slug()}.md"
 
     def url_path(self, base_url: str) -> str:
-        """Directory-style site URL for this page."""
-        sub = self.rel_path().with_suffix("")
-        return f"{base_url.rstrip('/')}/{sub}/"
+        """Directory-style site URL for this page.
+
+        MkDocs serves index.md files at the directory URL, not at .../index/.
+        So itsai/claude/index.md -> .../itsai/claude/  (not .../itsai/claude/index/).
+        """
+        rel = self.rel_path()
+        stem = rel.with_suffix("")
+        sub = stem.parent if stem.name == "index" else stem
+        sub_str = str(sub).replace("\\", "/")
+        if sub_str == ".":
+            return f"{base_url.rstrip('/')}/"
+        return f"{base_url.rstrip('/')}/{sub_str}/"
 
 
 _SLUG_STRIP = re.compile(r"[^a-z0-9]+")
@@ -67,6 +105,7 @@ def _frontmatter(doc: PageDoc) -> str:
         "lastmod": doc.lastmod,
         "confluence_id": doc.page_id,
         "confluence_space": doc.space,
+        "confluence_parent_id": doc.raw_ancestor_ids[-1] if doc.raw_ancestor_ids else "",
         "authors": doc.authors,
         "tags": doc.tags,
         "robots": doc.robots,

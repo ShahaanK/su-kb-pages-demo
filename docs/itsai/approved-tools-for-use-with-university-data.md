@@ -2,12 +2,13 @@
 title: Approved Tools for Use with University Data
 description: When a user is logged in with Syracuse University credentials (NetID),
   Syracuse University supports the use of the following University approved...
-ai_description: Syracuse University approves eight AI and productivity tools for use
-  with university data when authenticated with NetID credentials.
+ai_description: Syracuse University supports the use of eight approved AI and productivity
+  tools for handling university data when accessed with NetID credentials.
 date: '2025-10-01'
 lastmod: '2025-10-27'
 confluence_id: '488144948'
 confluence_space: ITSAI
+confluence_parent_id: '571670530'
 authors:
 - Ryan Elstad
 tags: []

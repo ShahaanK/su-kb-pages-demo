@@ -32,6 +32,13 @@ log = logging.getLogger(__name__)
 # the 3 held pages are test pages that live under this folder.
 RESTRICTED_FOLDER_ID = "1069121551"
 
+# Individual pages excluded from publication regardless of folder.
+# These are scratch/test pages confirmed not for the public site.
+EXCLUDED_PAGE_IDS: frozenset[str] = frozenset({
+    "948797482",  # (Test) Resume Tailor Machine Brain
+    "965672963",  # The Workflow (how you actually use it)
+})
+
 _AI_SEM = asyncio.Semaphore(3)
 
 # Matches Obsidian-style wikilinks produced by convert_storage_to_markdown:
@@ -133,6 +140,16 @@ async def build_pagedocs_from_su_kb(
             page_id = str(raw.get("id", ""))
             title = raw.get("title", "")
             visibility = _get_visibility(raw)
+
+            if page_id in EXCLUDED_PAGE_IDS:
+                page_docs.append(PageDoc(
+                    page_id=page_id,
+                    space=space,
+                    title=title,
+                    body_markdown="",
+                    visibility_signal="excluded",
+                ))
+                continue
 
             if visibility != "public":
                 # Restricted pages: return stub (no body fetch needed)
@@ -296,6 +313,14 @@ async def _convert_page(
         if lbl.get("name")
     ]
 
+    # Ancestor chain from the walk summary (already fetched in walk_expand).
+    # Root-first: e.g. [AI@SU_id, AI_id, Claude_id] for a Claude page.
+    raw_ancestor_ids = [
+        str(a.get("id", ""))
+        for a in raw_summary.get("ancestors", [])
+        if a.get("id")
+    ]
+
     return PageDoc(
         page_id=page_id,
         space=space,
@@ -308,6 +333,7 @@ async def _convert_page(
         authors=authors,
         tags=labels,
         visibility_signal="public",
+        raw_ancestor_ids=raw_ancestor_ids,
     )
 
 

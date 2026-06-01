@@ -45,7 +45,7 @@ def page_url(base_url: str, rel: Path) -> str:
         sub = stem.parent
     else:
         sub = stem
-    sub_str = "" if str(sub) == "." else f"{sub}/"
+    sub_str = "" if str(sub) == "." else f"{sub.as_posix()}/"
     return f"{base_url.rstrip('/')}/{sub_str}"
 
 

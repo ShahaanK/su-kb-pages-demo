@@ -2,13 +2,13 @@
 title: Creative AI Workflows & Tools
 description: Discover powerful ways to use AI tools beyond basic questions and answers.
   Each tool has unique capabilities - from building interactive dashboards...
-ai_description: Syracuse University IT guides users through advanced AI tool capabilities
-  including Claude's interactive dashboards, visualizations, and document analysis
-  featu...
+ai_description: Learn creative workflows combining AI tools like Claude to build interactive
+  dashboards, generate summaries, and create live artifacts beyond basic question-and...
 date: '2025-10-17'
 lastmod: '2025-10-30'
 confluence_id: '515670055'
 confluence_space: ITSAI
+confluence_parent_id: '571670530'
 authors:
 - Ryan Elstad
 - Josh Sidel
@@ -19,7 +19,7 @@ sitemap_exclude: false
 
 Discover powerful ways to use AI tools beyond basic questions and answers. Each tool has unique capabilities - from building interactive dashboards to generating podcast-style summaries. Below are the superpowers of each tool and creative workflows that combine them in surprising ways.
 
-For full tool details and data policies: [Approved Tools for Use with University Data](https://shahaank.github.io/su-kb-pages-demo/itsai\approved-tools-for-use-with-university-data/)
+For full tool details and data policies: [Approved Tools for Use with University Data](https://shahaank.github.io/su-kb-pages-demo/itsai/approved-tools-for-use-with-university-data/)
 
 ---
 
@@ -41,7 +41,7 @@ For full tool details and data policies: [Approved Tools for Use with University
 > 
 > Try It: Ask Claude to "build an interactive grade calculator" or "create a filterable task tracker"
 > 
-> Claude FAQ: [Claude - Frequently Asked Questions](https://shahaank.github.io/su-kb-pages-demo/itsai\claude-frequently-asked-questions/)
+> Claude FAQ: [Claude - Frequently Asked Questions](https://shahaank.github.io/su-kb-pages-demo/itsai/claude/claude-frequently-asked-questions/)
 
 ---
 
