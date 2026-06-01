@@ -3,7 +3,7 @@ title: mentorAI - Tools
 description: mentorAI has many tools available for each mentor. These tools can add
   new functionality to a mentor and there are more that may be rolled out in...
 ai_description: mentorAI provides various tools that can be enabled for mentors to
-  add new functionality through the mentor.ai.syr.edu platform.
+  add new functionality through the mentor.ai.syr.edu portal.
 date: '2026-01-07'
 lastmod: '2026-01-07'
 confluence_id: '700121089'

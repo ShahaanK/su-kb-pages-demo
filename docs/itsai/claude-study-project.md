@@ -2,8 +2,8 @@
 title: Claude Study Project
 description: Create a Study Project inside Claude to master subjects. Upload lecture
   slides, PDFs, or notes and ask Claude to explain, quiz , summarize chapters...
-ai_description: Use Claude's Study Project feature to upload educational materials
-  and generate summaries, flashcards, quizzes, and explanations for learning.
+ai_description: Use Claude Study Project to upload lecture materials and generate
+  summaries, explanations, quizzes, and flashcards for learning.
 date: '2025-10-15'
 lastmod: '2025-10-22'
 confluence_id: '511279124'

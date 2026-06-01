@@ -2,8 +2,8 @@
 title: 'Understanding Claude Products: Chat, Code, and API'
 description: '--- Claude Chat is the conversational interface you use to talk with
   Claude directly. It''s available through the web at <http://claude.ai , as well...'
-ai_description: Claude Chat is a conversational interface available via web, mobile,
-  and desktop for writing, analysis, coding help, and general productivity tasks.
+ai_description: Claude Chat is a conversational web and mobile interface for interacting
+  with Claude for writing, analysis, coding, research, and productivity tasks.
 date: '2025-10-21'
 lastmod: '2025-11-10'
 confluence_id: '522158118'

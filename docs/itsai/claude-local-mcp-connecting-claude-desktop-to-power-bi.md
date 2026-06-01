@@ -2,9 +2,8 @@
 title: Claude Local MCP - Connecting Claude Desktop to Power BI
 description: '--- Claude local MCP (Model Context Protocol) is an open-source standard
   developed by Anthropic that allows the Claude Desktop app to securely...'
-ai_description: Claude Local MCP is an open-source standard that enables secure connection
-  between Claude Desktop and local tools like Power BI for data interaction and AI
-  auto...
+ai_description: Claude Local MCP enables secure connection between Claude Desktop
+  and local tools like Power BI for AI-driven automation without leaving your desktop.
 date: '2026-02-20'
 lastmod: '2026-05-15'
 confluence_id: '837517313'

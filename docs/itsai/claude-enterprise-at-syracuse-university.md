@@ -3,7 +3,7 @@ title: Claude Enterprise at Syracuse University
 description: Claude Enterprise is Syracuse University's premium AI assistant that
   helps you work smarter, not harder. Think of Claude as your intelligent...
 ai_description: Claude Enterprise is Syracuse University's premium AI assistant that
-  helps users write, analyze, research, and solve problems.
+  helps with writing, analysis, research, and problem-solving tasks.
 date: '2025-10-27'
 lastmod: '2025-10-30'
 confluence_id: '534642749'
@@ -61,16 +61,16 @@ Using Claude is as simple as having a conversation. You type your question or re
 
 ## Showcase of Syracuse University Claude uses
 
-[Transform your meeting transcripts into actionable summaries, meeting minutes, and task lists using Claude](https://EXAMPLE.github.io/su-kb-pages-demo/itsai\meeting-summaries-with-claude/).
+[Transform your meeting transcripts into actionable summaries, meeting minutes, and task lists using Claude](https://shahaank.github.io/su-kb-pages-demo/itsai\meeting-summaries-with-claude/).
 
-[Create aStudy Projectinside Claude to master subjects](https://EXAMPLE.github.io/su-kb-pages-demo/itsai\claude-study-project/)
+[Create aStudy Projectinside Claude to master subjects](https://shahaank.github.io/su-kb-pages-demo/itsai\claude-study-project/)
 
-[Create and revise resumes, draft personalized cover letters, practice behavioral interview questions](https://EXAMPLE.github.io/su-kb-pages-demo/itsai\claude-career-project/)
+[Create and revise resumes, draft personalized cover letters, practice behavioral interview questions](https://shahaank.github.io/su-kb-pages-demo/itsai\claude-career-project/)
 
 ---
 
 #### Additional Info
 
-[Claude Frequently Asked Questions](https://EXAMPLE.github.io/su-kb-pages-demo/itsai\claude-frequently-asked-questions/)
+[Claude Frequently Asked Questions](https://shahaank.github.io/su-kb-pages-demo/itsai\claude-frequently-asked-questions/)
 
-[Purchase Claude Code access](https://EXAMPLE.github.io/su-kb-pages-demo/itsai\purchase-claude-code-and-claude-api-access/)
+[Purchase Claude Code access](https://shahaank.github.io/su-kb-pages-demo/itsai\purchase-claude-code-and-claude-api-access/)

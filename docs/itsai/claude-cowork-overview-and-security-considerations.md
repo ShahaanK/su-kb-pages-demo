@@ -2,8 +2,8 @@
 title: Claude Cowork — Overview and Security Considerations
 description: '--- Claude Cowork is a feature built into the Claude Desktop application
   that gives Claude the ability to act as an autonomous desktop agent....'
-ai_description: Claude Cowork is an autonomous desktop agent feature in Claude Desktop
-  that executes multi-step tasks by reading and editing files on your computer.
+ai_description: Claude Cowork is a Claude Desktop feature enabling autonomous task
+  execution on your computer through multi-step file operations.
 date: '2026-02-20'
 lastmod: '2026-02-20'
 confluence_id: '836698117'
@@ -81,7 +81,7 @@ Syracuse University users have access to a robust set of Claude capabilities tha
 - **Claude Code** — Terminal-based agentic coding tool for developers. Available via premium seat purchase. Covered by enterprise audit infrastructure.
 - **Claude API** — Programmatic access for building applications and automations. Available via premium seat purchase.
 
-For more information on these products, see [Understanding Claude Products: Chat, Code, and API](https://EXAMPLE.github.io/su-kb-pages-demo/itsai\understanding-claude-products-chat-code-and-api/).
+For more information on these products, see [Understanding Claude Products: Chat, Code, and API](https://shahaank.github.io/su-kb-pages-demo/itsai\understanding-claude-products-chat-code-and-api/).
 
 ---
 

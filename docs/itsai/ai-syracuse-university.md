@@ -2,9 +2,8 @@
 title: AI @ Syracuse University
 description: Generative artificial intelligence (AI) tools like Claude by Anthropic,
   Microsoft Copilot and Google Gemini have redefined what it means to work,...
-ai_description: Syracuse University provides access to generative AI tools including
-  Claude Enterprise, Microsoft Copilot, and Google Gemini for students, faculty, and
-  staff.
+ai_description: Syracuse University provides generative AI tools including Claude
+  Enterprise, Microsoft Copilot, and Google Gemini for students, faculty, and staff.
 date: '2025-09-29'
 lastmod: '2026-03-20'
 confluence_id: '483525103'
@@ -32,7 +31,7 @@ Generative artificial intelligence (AI) tools like Claude by Anthropic, Microsof
 
 Claude Enterprise is an advanced AI assistant developed by Anthropic and is available to all Syracuse University students, faculty and staff.
 
-[Learn more about Claude](https://EXAMPLE.github.io/su-kb-pages-demo/itsai\claude-enterprise-at-syracuse-university/)
+[Learn more about Claude](https://shahaank.github.io/su-kb-pages-demo/itsai\claude-enterprise-at-syracuse-university/)
 
 [Sign-up Now!](https://getclaude.syr.edu)
 
@@ -40,7 +39,7 @@ Claude Enterprise is an advanced AI assistant developed by Anthropic and is avai
 
 Syracuse University’s private AI platform for Teaching & Learning and AI Innovation. Available to all Syracuse University students, faculty and staff.
 
-[Learn more about the Clementine Platform](https://EXAMPLE.github.io/su-kb-pages-demo/itsai\mentorai-syracuse-university/)
+[Learn more about the Clementine Platform](https://shahaank.github.io/su-kb-pages-demo/itsai\mentorai-syracuse-university/)
 
 [Try Clementine](https://mentor.ai.syr.edu/platform/syracuse/e34f0313-81fc-4156-9cb1-aa7e0b90a3ce)
 
@@ -60,7 +59,7 @@ An AI assistant developed by Google, Syracuse has access Google's 2.5 Pro Model 
 
 [FAQ](https://answers.atlassian.syr.edu/wiki/spaces/ITSAI/pages/488865911/Gemini+-+Frequently+Asked+Questions?atlOrigin=eyJpIjoiMGVkMmM5NGMzMGI2NGI2NzgwOWYwZjI3NWZmZjQ5NWIiLCJwIjoiYyJ9)
 
-### [Additional AI tools and platforms approved for use](https://EXAMPLE.github.io/su-kb-pages-demo/itsai\approved-tools-for-use-with-university-data/)
+### [Additional AI tools and platforms approved for use](https://shahaank.github.io/su-kb-pages-demo/itsai\approved-tools-for-use-with-university-data/)
 
 ---
 

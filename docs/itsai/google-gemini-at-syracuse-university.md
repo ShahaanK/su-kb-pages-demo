@@ -3,7 +3,7 @@ title: Google Gemini at Syracuse University
 description: Gemini is one of Syracuse University's AI assistants that helps you work
   smarter, not harder. Think of Gemini as your intelligent digital colleague...
 ai_description: Gemini is Syracuse University's AI assistant accessible via Google
-  account that helps users write, research, analyze, and solve problems.
+  account login that helps with writing, research, analysis, and problem-solving tasks.
 date: '2025-10-30'
 lastmod: '2025-10-30'
 confluence_id: '544538648'

@@ -2,8 +2,8 @@
 title: Drafting Emails with Claude
 description: Write clear, professional, and confident emails — fast. Claude helps
   you compose and refine messages using natural prompts and built-in editing...
-ai_description: Claude helps Syracuse University users compose and refine professional
-  emails quickly using natural language prompts and artifact editing tools.
+ai_description: Claude can help Syracuse University users draft, refine, and edit
+  professional emails quickly using natural language prompts and artifact panels.
 date: '2025-10-17'
 lastmod: '2025-11-11'
 confluence_id: '516325410'

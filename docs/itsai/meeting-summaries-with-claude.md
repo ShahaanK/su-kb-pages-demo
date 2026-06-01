@@ -3,7 +3,7 @@ title: Meeting Summaries with Claude
 description: 'Transform your meeting transcripts into actionable summaries, meeting
   minutes, and task lists using Claude. You’ll need: A transcript file from...'
 ai_description: Learn how to use Claude to automatically generate meeting summaries,
-  minutes, and task lists from Zoom or Teams transcripts.
+  minutes, and task lists from Zoom and Teams transcripts.
 date: '2025-10-09'
 lastmod: '2026-01-23'
 confluence_id: '500236296'

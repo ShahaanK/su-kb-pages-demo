@@ -2,8 +2,8 @@
 title: mentorAI Creating A Mentor
 description: Creating a mentor profile on MentorAI is a straightforward process that
   involves entering essential information, selecting visibility options, and...
-ai_description: MentorAI allows mentors to create profiles by entering information,
-  setting visibility options, and configuring prompts to connect with students.
+ai_description: MentorAI allows mentors to create profiles by entering their name,
+  description, and configuring visibility and interaction settings.
 date: '2025-10-27'
 lastmod: '2025-11-11'
 confluence_id: '535068673'
@@ -20,7 +20,7 @@ Creating a mentor profile on MentorAI is a straightforward process that involves
 
 Please Reference for More mentorAI Guidance:
 
-[mentorAI Settings & Options](https://EXAMPLE.github.io/su-kb-pages-demo/itsai\mentorai-settings-options/)
+[mentorAI Settings & Options](https://shahaank.github.io/su-kb-pages-demo/itsai\mentorai-settings-options/)
 
 mentorAI Setting Up a Web Crawler
 

@@ -2,8 +2,8 @@
 title: The Workflow (how you actually use it)
 description: 'Paste this into Claude (connected to Confluence): --- You are a resume
   optimization assistant helping Fernando Hernandez tailor his resume for a...'
-ai_description: This page provides instructions for using a Claude-based resume tailoring
-  system that matches a master resume against job descriptions.
+ai_description: This page explains how to use a Claude-powered resume tailoring system
+  that matches master resume content to specific job descriptions.
 date: '2026-04-06'
 lastmod: '2026-04-06'
 confluence_id: '965672963'

@@ -2,8 +2,8 @@
 title: Working with SharePoint Files in Claude
 description: Claude can find, read, and edit files stored in SharePoint — including
   adding new entries, updating content, and creating new files. The key is...
-ai_description: Claude can access and manage SharePoint files through the Claude Desktop
-  app by creating OneDrive shortcuts and using the Filesystem connector.
+ai_description: Claude can read, edit, create, and delete SharePoint files through
+  OneDrive shortcuts using the Filesystem connector in Claude Desktop.
 date: '2026-04-14'
 lastmod: '2026-04-16'
 confluence_id: '988774401'

@@ -2,9 +2,8 @@
 title: mentorAI Settings & Options
 description: Use Settings & Options to customize how your mentorAI looks, behaves,
   and interacts with users. Each setting helps tailor your mentor’s purpose,...
-ai_description: MentorAI Settings & Options allows customization of mentor appearance,
-  behavior, interaction style, and visibility through Settings, LLM, Prompts, and
-  Safety ta...
+ai_description: Configure mentorAI appearance, behavior, and interaction settings
+  including name, visibility, AI model selection, and safety parameters.
 date: '2025-11-07'
 lastmod: '2026-03-30'
 confluence_id: '567279621'
@@ -133,7 +132,7 @@ The **Disclaimers tab** allows you to add advisory messages that appear above th
 
 The **Tools tab** lets you manage what additional resources your mentorAI can access while responding to users.
 
-Find additional information here: [mentorAI - Tools](https://EXAMPLE.github.io/su-kb-pages-demo/itsai\mentorai-tools/)
+Find additional information here: [mentorAI - Tools](https://shahaank.github.io/su-kb-pages-demo/itsai\mentorai-tools/)
 
 !Screenshot 2025-11-10 at 1.04.35 PM.png🗂️ Using Trained Documents?
 

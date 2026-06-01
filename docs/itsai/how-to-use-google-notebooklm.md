@@ -2,8 +2,9 @@
 title: How to use Google NotebookLM
 description: NotebookLM helps you turn your course materials into insight. Upload
   your class readings, ask smart questions, and create summaries or study notes...
-ai_description: Google NotebookLM is an AI tool that helps students summarize course
-  materials, ask questions, and generate study notes from uploaded documents and links.
+ai_description: Google NotebookLM is an AI tool that helps students organize course
+  materials, generate summaries, and create study notes from uploaded documents and
+  web source...
 date: '2025-10-24'
 lastmod: '2025-10-24'
 confluence_id: '530546723'

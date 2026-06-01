@@ -2,9 +2,8 @@
 title: Copilot – Frequently Asked Questions
 description: The user retains all ownership of any inputs to Microsoft Copilot and
   is granted ownership over any outputs that Copilot creates. --- When logged...
-ai_description: This page answers common questions about Microsoft Copilot usage at
-  Syracuse University, including data ownership, appropriate information types, and
-  data reten...
+ai_description: Copilot frequently asked questions covering data ownership, appropriate
+  university information use, and data retention policies.
 date: '2025-10-22'
 lastmod: '2025-10-30'
 confluence_id: '522289260'

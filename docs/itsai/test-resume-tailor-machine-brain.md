@@ -2,8 +2,8 @@
 title: (Test) Resume Tailor Machine Brain
 description: 'Master Resume: Fernando Hernandez 929-305-9082 fehernandez2005@gmail.com
   www.linkedin.com/in/fhencarn EDUCATION Syracuse University, Bachelor of...'
-ai_description: Fernando Hernandez is a Syracuse University student interning with
-  the Enterprise Data & A.I. Team, developing AI documentation and use cases.
+ai_description: Fernando Hernandez's master resume highlights his Syracuse University
+  education and internship experience with the Enterprise Data & A.I. Team.
 date: '2026-03-30'
 lastmod: '2026-04-06'
 confluence_id: '948797482'

@@ -2,9 +2,9 @@
 title: Smart Study Companion with Gemini
 description: Transform how you learn with a personalized “Study Gem.” Upload class
   materials and let Gemini explain difficult concepts, quiz you on topics, and...
-ai_description: Syracuse University's Smart Study Companion with Gemini allows students
-  to create personalized AI tutors using Google accounts to explain concepts and generate
-  ...
+ai_description: Gemini Study Gems help Syracuse University students create personalized
+  AI tutors using their course materials for concept explanations and custom study
+  guides.
 date: '2025-10-17'
 lastmod: '2025-10-30'
 confluence_id: '515801118'

@@ -2,9 +2,9 @@
 title: Purchase Claude Code and Claude API Access
 description: Claude Code and Claude API are advanced features offered by Anthropic.
   Members of the Syracuse University community are provided standard...
-ai_description: Syracuse University provides information on purchasing Claude Code
-  and Claude API access for faculty, staff, and students through departmental funding
-  or busine...
+ai_description: Syracuse University faculty, staff, and students can purchase Claude
+  Code and Claude API access through departmental funding or university business credit
+  cards...
 date: '2025-10-29'
 lastmod: '2026-04-15'
 confluence_id: '540934169'

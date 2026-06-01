@@ -2,8 +2,8 @@
 title: Requesting a Claude Connector
 description: Claude Enterprise supports connectors — integrations that allow Claude
   to read from and interact with third-party tools and services you use at...
-ai_description: Users can request Claude connectors through Syracuse University ITS
-  to enable integrations with third-party tools like Microsoft 365 and Atlassian.
+ai_description: Syracuse University users can request approval for Claude AI connectors
+  to integrate third-party tools and services through the ITS department.
 date: '2026-02-23'
 lastmod: '2026-02-23'
 confluence_id: '841875458'

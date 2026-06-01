@@ -2,8 +2,8 @@
 title: mentorAI - Using the API
 description: '[!note] This document is still under construction, thank you for your
   patience. This document is designed to provide starting point with...'
-ai_description: This guide provides instructions for programmatically interacting
-  with mentorAI through its API using various tools and methods.
+ai_description: This document provides guidance on using mentorAI's API for programmatic
+  interactions and development.
 date: '2025-11-18'
 lastmod: '2026-03-05'
 confluence_id: '591101962'

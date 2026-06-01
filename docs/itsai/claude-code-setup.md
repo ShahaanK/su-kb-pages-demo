@@ -2,8 +2,8 @@
 title: Claude Code Setup
 description: 'Using one of the methods for obtaining Claude Code described on the
   page: Purchase Claude Code and Claude API Access - Artificial Intelligence (AI)...'
-ai_description: Learn how to set up Claude Code and install required development tools
-  like Node.js, Git, and Python.
+ai_description: A PowerShell script automates Claude Code and development tools installation
+  on Windows for Node.js, Git, and Python.
 date: '2026-04-14'
 lastmod: '2026-04-15'
 confluence_id: '986841103'
@@ -18,7 +18,7 @@ sitemap_exclude: false
 
 # Step 1: Get access to Claude Code
 
-Using one of the methods for obtaining Claude Code described on the page: [Purchase Claude Code and Claude API Access - Artificial Intelligence (AI) - Answers](https://EXAMPLE.github.io/su-kb-pages-demo/itsai\purchase-claude-code-and-claude-api-access/)
+Using one of the methods for obtaining Claude Code described on the page: [Purchase Claude Code and Claude API Access - Artificial Intelligence (AI) - Answers](https://shahaank.github.io/su-kb-pages-demo/itsai\purchase-claude-code-and-claude-api-access/)
 
 # Step 2: Install Claude Code & Development Tools
 

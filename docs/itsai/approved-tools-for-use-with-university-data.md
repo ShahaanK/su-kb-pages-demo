@@ -2,9 +2,8 @@
 title: Approved Tools for Use with University Data
 description: When a user is logged in with Syracuse University credentials (NetID),
   Syracuse University supports the use of the following University approved...
-ai_description: Syracuse University approves the use of Claude, mentorAI, Microsoft
-  Copilot, Google Gemini, Blackboard AI, ChatGPT Teams, Adobe Firefly, and Gradescope
-  with uni...
+ai_description: Syracuse University approves eight AI and productivity tools for use
+  with university data when authenticated with NetID credentials.
 date: '2025-10-01'
 lastmod: '2025-10-27'
 confluence_id: '488144948'

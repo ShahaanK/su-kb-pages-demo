@@ -2,9 +2,8 @@
 title: AI Research Assistant with Claude
 description: Claude can act as your personal research assistant. Analyze sources,
   draft outlines, compare research, and explore ideas—all in one place with...
-ai_description: Claude is a research assistant tool that helps Syracuse University
-  students analyze documents, create outlines, and organize academic research with
-  enhanced cit...
+ai_description: Claude AI research assistant at Syracuse University helps students
+  analyze documents, create outlines, and organize research with citation support.
 date: '2025-11-10'
 lastmod: '2025-11-10'
 confluence_id: '572194844'

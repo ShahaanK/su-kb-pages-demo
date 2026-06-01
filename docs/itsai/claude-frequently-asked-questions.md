@@ -2,8 +2,8 @@
 title: Claude - Frequently Asked Questions
 description: '[!info] You may see Anthropic and Claude used interchangeably. Anthropic
   is the name of the company that owns and develops Claude. The Anthropic...'
-ai_description: Claude is an AI assistant owned by Anthropic where Syracuse University
-  users retain ownership of uploaded data and outputs.
+ai_description: Claude is an AI tool owned by Anthropic where Syracuse University
+  users retain ownership of their data and outputs.
 date: '2025-10-01'
 lastmod: '2026-03-13'
 confluence_id: '488210484'
@@ -27,7 +27,7 @@ The Anthropic Claude terms of service that govern the Syracuse University instan
 
 ---
 
-## What classifications of data may be uploaded to the Claude platform when I logged in with my Syracuse University credentials to [approved AI tools](https://EXAMPLE.github.io/su-kb-pages-demo/itsai\approved-tools-for-use-with-university-data/)?
+## What classifications of data may be uploaded to the Claude platform when I logged in with my Syracuse University credentials to [approved AI tools](https://shahaank.github.io/su-kb-pages-demo/itsai\approved-tools-for-use-with-university-data/)?
 
 All classifications of university data can be uploaded and used when a user is logged in with university credentials (NetID).
 
@@ -65,7 +65,7 @@ Incognito chats are temporary conversations that aren't saved to your chat histo
 
 ## How can I get access to Claude Code?
 
-Claude Code is a way to consume Claude models via API access and the Claude Code terminal. The Claude Enterprise License does not include Claude Code, but users can purchase access via a credit card. [Learn More](https://EXAMPLE.github.io/su-kb-pages-demo/itsai\purchase-claude-code-and-claude-api-access/).
+Claude Code is a way to consume Claude models via API access and the Claude Code terminal. The Claude Enterprise License does not include Claude Code, but users can purchase access via a credit card. [Learn More](https://shahaank.github.io/su-kb-pages-demo/itsai\purchase-claude-code-and-claude-api-access/).
 
 ---
 

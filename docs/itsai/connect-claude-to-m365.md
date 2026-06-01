@@ -3,7 +3,7 @@ title: Connect Claude to M365
 description: Claude can be connected to Microsoft 365 via the connector. This will
   allow your Claude instance to reference materials and gain context based on...
 ai_description: Claude can be connected to Microsoft 365 to access Teams messages,
-  emails, SharePoint documents, and OneDrive files.
+  Outlook emails, SharePoint documents, and OneDrive files.
 date: '2025-10-30'
 lastmod: '2026-02-24'
 confluence_id: '544210961'

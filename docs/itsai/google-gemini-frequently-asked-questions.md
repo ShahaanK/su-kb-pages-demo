@@ -2,9 +2,8 @@
 title: Google Gemini - Frequently Asked Questions
 description: Sign in with your Syracuse University Google account, not your personal
   Gmail. When prompted, use your SU Google account, which is your NetID...
-ai_description: Syracuse University provides Gemini access through institutional Google
-  accounts using your NetID, with data protection ensuring user content is not used
-  for AI...
+ai_description: Syracuse University provides Google Gemini access through SU Google
+  accounts with enterprise-grade data protection that prevents training data usage.
 date: '2025-10-08'
 lastmod: '2025-10-30'
 confluence_id: '498597967'

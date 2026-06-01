@@ -3,7 +3,8 @@ title: Clementine Class Search
 description: 'Clementine: Class Search is Syracuse University''s AI-powered class
   search tool — built to help students find the right classes faster, in natural...'
 ai_description: Clementine is Syracuse University's AI-powered natural language class
-  search tool that helps students find courses faster by searching across class descriptions...
+  search tool that helps students find courses faster by understanding conversational
+  querie...
 date: '2026-03-11'
 lastmod: '2026-04-01'
 confluence_id: '895451142'

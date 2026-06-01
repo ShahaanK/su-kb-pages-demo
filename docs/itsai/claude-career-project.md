@@ -2,8 +2,8 @@
 title: Claude Career Project
 description: You can create and revise resumes, draft personalized cover letters,
   practice behavioral interview questions and research companies to prepare for...
-ai_description: Claude Career Project helps students prepare for internships and jobs
-  by tailoring resumes, drafting cover letters, and practicing interviews.
+ai_description: Claude Career Project helps students tailor resumes, write cover letters,
+  practice interviews, and research companies for job applications.
 date: '2025-10-15'
 lastmod: '2025-10-22'
 confluence_id: '511246346'
