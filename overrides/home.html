@@ -1,0 +1,225 @@
+{#
+  overrides/home.html -- Custom landing page for itsai/index.md.
+  Activated via frontmatter: template: home.html
+  Extends main.html so the nav bar, tabs, skip link, and footer are inherited.
+  Only {% block content %} is replaced; gen_llms.py and mirror_markdown.py
+  read source .md files directly and are unaffected by this template.
+#}
+{% extends "main.html" %}
+
+{% block content %}
+
+  {# Re-inject the skip-link target. main.html puts this anchor in its own
+     {% block content %} override; since we replace that block entirely we
+     must re-declare it here so <a href="#main-content"> in the header block
+     always has a valid DOM target and keyboard tabbing surfaces the skip link
+     first. #}
+  <span id="main-content" class="su-main-anchor" tabindex="-1" aria-hidden="true"></span>
+
+  <div class="su-homepage">
+
+    {# ── HERO ─────────────────────────────────────────────────── #}
+    <section class="su-hero" aria-label="Welcome to the AI Knowledge Base">
+      <div class="su-hero-inner">
+        <p class="su-eyebrow">ITS AI Knowledge Base</p>
+        <h1>Data &amp; <span class="su-hero-accent">AI</span> at Syracuse</h1>
+        <p class="su-hero-subhead">
+          Everything the SU community needs to use AI tools safely and effectively -
+          Claude, Gemini, Copilot, and SU's own Clementine platform.
+        </p>
+        <div class="su-hero-ctas">
+          <a href="claude/" class="su-btn su-btn--primary">Browse Claude</a>
+          <a href="approved-tools-for-use-with-university-data/" class="su-btn su-btn--ghost">What's Approved</a>
+        </div>
+        <div class="su-hero-meta" aria-label="Knowledge base statistics">
+          <span class="su-hero-meta-item">
+            <span class="su-hero-meta-dot" aria-hidden="true"></span>
+            35 pages
+          </span>
+          <span class="su-hero-meta-item">
+            <span class="su-hero-meta-dot" aria-hidden="true"></span>
+            5 tools
+          </span>
+          <span class="su-hero-meta-item">
+            <span class="su-hero-meta-dot" aria-hidden="true"></span>
+            Synced from Confluence
+          </span>
+        </div>
+      </div>
+    </section>
+
+    {# ── TOOL CARD GRID ────────────────────────────────────────── #}
+    <section class="su-tools" aria-label="Available AI tools">
+      <div class="su-tools-inner">
+        <div class="su-tools-header">
+          <p class="su-eyebrow">Available at SU</p>
+          <h2>AI Tools for the SU Community</h2>
+          <p>Browse documentation for each platform - setup guides, FAQs, and hands-on workflows.</p>
+        </div>
+
+        <div class="su-tool-grid">
+
+          {# Claude (featured)
+             HAND-MAINTAINED: update page count and tags after re-ingest.
+             Current count: 15 (claude/ section including example-uses). #}
+          <a href="claude/" class="su-tool-card su-tool-card--featured">
+            <div class="su-tool-card-header">
+              <div class="su-tool-card-icon">C</div>
+              <div class="su-tool-card-title">
+                Claude
+                <span class="su-badge su-badge--accent">Premium</span>
+              </div>
+            </div>
+            <p class="su-tool-card-desc">
+              Anthropic's enterprise AI assistant - available to all SU students, faculty,
+              and staff with M365 connector, Claude Code, and secure data handling.
+            </p>
+            <div class="su-tool-card-footer">
+              <div class="su-tool-card-meta">
+                <span class="su-badge">15 pages</span>
+                <span class="su-badge">FAQ</span>
+                <span class="su-badge">Setup</span>
+                <span class="su-badge">Examples</span>
+              </div>
+              <span class="su-tool-card-cta" aria-hidden="true">
+                Open
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+              </span>
+            </div>
+          </a>
+
+          {# Clementine Platform
+             HAND-MAINTAINED: update page count and tags after re-ingest.
+             Current count: 6 (clementine-platform/ section). #}
+          <a href="clementine-platform/" class="su-tool-card">
+            <div class="su-tool-card-header">
+              <div class="su-tool-card-icon">m</div>
+              <div class="su-tool-card-title">Clementine Platform</div>
+            </div>
+            <p class="su-tool-card-desc">
+              SU's home-grown private AI platform - mentorAI course tutors,
+              Clementine Class Search, and API access for developers.
+            </p>
+            <div class="su-tool-card-footer">
+              <div class="su-tool-card-meta">
+                <span class="su-badge">6 pages</span>
+                <span class="su-badge">Setup</span>
+                <span class="su-badge">API</span>
+                <span class="su-badge">Tools</span>
+              </div>
+              <span class="su-tool-card-cta" aria-hidden="true">
+                Open
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+              </span>
+            </div>
+          </a>
+
+          {# Google Gemini
+             HAND-MAINTAINED: update page count and tags after re-ingest.
+             Current count: 4 (gemini/ section). #}
+          <a href="gemini/" class="su-tool-card">
+            <div class="su-tool-card-header">
+              <div class="su-tool-card-icon">G</div>
+              <div class="su-tool-card-title">Google Gemini</div>
+            </div>
+            <p class="su-tool-card-desc">
+              Gemini at SU through Google Workspace - g.syr.edu login,
+              NotebookLM, and AI-assisted study companion workflows.
+            </p>
+            <div class="su-tool-card-footer">
+              <div class="su-tool-card-meta">
+                <span class="su-badge">4 pages</span>
+                <span class="su-badge">FAQ</span>
+                <span class="su-badge">Workflows</span>
+              </div>
+              <span class="su-tool-card-cta" aria-hidden="true">
+                Open
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+              </span>
+            </div>
+          </a>
+
+          {# Microsoft Copilot
+             HAND-MAINTAINED: update page count and tags after re-ingest.
+             Current count: 1 (copilot/ section). #}
+          <a href="copilot/" class="su-tool-card">
+            <div class="su-tool-card-header">
+              <div class="su-tool-card-icon">Co</div>
+              <div class="su-tool-card-title">Microsoft Copilot</div>
+            </div>
+            <p class="su-tool-card-desc">
+              Copilot for eligible SU Microsoft 365 users - data retention posture,
+              training opt-out, and the protected vs commercial Copilot distinction.
+            </p>
+            <div class="su-tool-card-footer">
+              <div class="su-tool-card-meta">
+                <span class="su-badge">1 page</span>
+                <span class="su-badge">FAQ</span>
+              </div>
+              <span class="su-tool-card-cta" aria-hidden="true">
+                Open
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+              </span>
+            </div>
+          </a>
+
+          {# AI Info and Policies
+             HAND-MAINTAINED: update page count and tags after re-ingest.
+             Current count: 2 (approved-tools + creative-ai-workflows flat pages). #}
+          <a href="approved-tools-for-use-with-university-data/" class="su-tool-card">
+            <div class="su-tool-card-header">
+              <div class="su-tool-card-icon">AI</div>
+              <div class="su-tool-card-title">AI Info &amp; Policies</div>
+            </div>
+            <p class="su-tool-card-desc">
+              The canonical approved-tools list and creative AI workflow guides
+              for the SU community.
+            </p>
+            <div class="su-tool-card-footer">
+              <div class="su-tool-card-meta">
+                <span class="su-badge">2 pages</span>
+                <span class="su-badge">Policy</span>
+                <span class="su-badge">Workflows</span>
+              </div>
+              <span class="su-tool-card-cta" aria-hidden="true">
+                Open
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+              </span>
+            </div>
+          </a>
+
+        </div>{# /.su-tool-grid #}
+      </div>{# /.su-tools-inner #}
+    </section>
+
+    {# ── CONTENT BAND ──────────────────────────────────────────── #}
+    <section class="su-band" aria-label="About this knowledge base">
+      <div class="su-band-inner">
+
+        <div class="su-band-block">
+          <p class="su-eyebrow su-eyebrow--light">Owned by Syracuse</p>
+          <h2>Your data stays at SU</h2>
+          <p>
+            The tools listed here are approved for use with university data.
+            SU negotiated data-processing agreements that prevent your prompts
+            and files from training third-party models.
+          </p>
+          <a href="approved-tools-for-use-with-university-data/" class="su-btn su-btn--ghost">View Approved Tools</a>
+        </div>
+
+        <div class="su-band-block">
+          <p class="su-eyebrow su-eyebrow--light">For Claude users</p>
+          <h2>Get the most out of Claude</h2>
+          <p>
+            Set up the M365 connector, explore Claude Code, browse example
+            workflows, and learn the security posture of Claude Enterprise at SU.
+          </p>
+          <a href="claude/" class="su-btn su-btn--ghost">Browse Claude Docs</a>
+        </div>
+
+      </div>
+    </section>
+
+  </div>{# /.su-homepage #}
+
+{% endblock %}

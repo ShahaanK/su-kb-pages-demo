@@ -269,3 +269,661 @@ textarea:focus-visible,
   overflow: hidden;
   visibility: hidden;
 }
+
+/* ================================================================
+   HOMEPAGE RESTYLE
+   Hero band + tool-card grid + content band, ported from
+   julianhernandez2155.github.io/su-kb-site/ design system.
+   All existing rules above are unchanged.
+   ================================================================ */
+
+/* ── EXTENDED DESIGN TOKENS ──────────────────────────────────── */
+/* Spacing scale, shadows, motion, radius, gradients, and semantic
+   color roles used by the homepage and hub-card components.     */
+:root {
+  /* Spacing (4px base grid) */
+  --sp-1:  0.25rem;
+  --sp-2:  0.5rem;
+  --sp-3:  0.75rem;
+  --sp-4:  1rem;
+  --sp-5:  1.5rem;
+  --sp-6:  2rem;
+  --sp-7:  3rem;
+  --sp-8:  4rem;
+  --sp-9:  6rem;
+
+  /* Border radius */
+  --su-radius-sm:   6px;
+  --su-radius-md:   10px;
+  --su-radius-lg:   16px;
+  --su-radius-xl:   20px;
+  --su-radius-pill: 999px;
+
+  /* Shadows */
+  --su-shadow-sm:     0 1px 2px rgba(0, 14, 84, 0.06);
+  --su-shadow-md:     0 2px 16px rgba(0, 14, 84, 0.07);
+  --su-shadow-lg:     0 12px 40px rgba(0, 14, 84, 0.10),
+                      0 4px 16px rgba(0, 14, 84, 0.05);
+  --su-shadow-accent: 0 12px 40px rgba(247, 105, 0, 0.18),
+                      0 4px 16px rgba(0, 14, 84, 0.08);
+  --su-glow-orange:   0 4px 20px rgba(247, 105, 0, 0.35);
+
+  /* Motion */
+  --su-ease-out:  cubic-bezier(0.16, 1, 0.3, 1);
+  --su-dur-fast:  0.15s;
+  --su-dur-base:  0.25s;
+
+  /* Gradients */
+  --su-grad-blue:        linear-gradient(118deg, #000E54 30%, #203299 99%);
+  --su-grad-orange:      linear-gradient(84deg, #FF431B 0%, #F76900 51%, #FF8E00 100%);
+  --su-grad-card-border: linear-gradient(135deg, #F76900 0%, #2B72D7 100%);
+
+  /* Semantic text roles (AA-safe on white) */
+  --su-color-border:     rgba(0, 14, 84, 0.10);
+  --su-color-text-muted: var(--su-gray-dark); /* #404040, 9.4:1 on white */
+}
+
+/* ── HOMEPAGE FULL-BLEED RESET ───────────────────────────────── */
+/* Removes Material's content-column max-width/padding so hero and
+   section bands span the full viewport. Graceful fallback in
+   browsers without :has() support: content stays readable inside
+   the column. */
+.md-grid:has(.su-homepage) {
+  max-width: 100%;
+  padding: 0;
+}
+.md-content:has(.su-homepage) {
+  max-width: 100%;
+}
+.md-content__inner:has(.su-homepage) {
+  padding: 0;
+  margin: 0;
+  max-width: none;
+}
+.md-main__inner:has(.su-homepage) .md-sidebar {
+  display: none;
+}
+
+/* Suppress Material's .md-typeset link color and permalink anchors
+   inside the homepage so card and button link colors are not overridden. */
+.su-homepage a {
+  text-decoration: none;
+}
+.su-homepage .su-tool-card,
+.su-homepage .su-tool-card:hover {
+  color: inherit;
+}
+.su-homepage .headerlink {
+  display: none;
+}
+
+/* ── EYEBROW TAG ─────────────────────────────────────────────── */
+.su-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  font-family: var(--md-text-font);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--su-orange-dark);
+  margin: 0;
+}
+.su-eyebrow::before {
+  content: "";
+  width: 1.5rem;
+  height: 2px;
+  background: var(--su-orange);
+  border-radius: 1px;
+  flex-shrink: 0;
+}
+/* White variant for dark backgrounds */
+.su-eyebrow--light {
+  color: var(--su-orange-light);  /* #FF8E00, 7.9:1 on navy #000E54 */
+}
+.su-eyebrow--light::before {
+  background: var(--su-orange-light);
+}
+
+/* ── BUTTONS ─────────────────────────────────────────────────── */
+.su-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  padding: 0.875rem 1.625rem;
+  border-radius: var(--su-radius-md);
+  font-family: var(--md-text-font);
+  font-weight: 700;
+  font-size: 1.0625rem;
+  text-decoration: none;
+  border: 1.5px solid transparent;
+  cursor: pointer;
+  transition: background var(--su-dur-base) var(--su-ease-out),
+              transform   var(--su-dur-base) var(--su-ease-out),
+              box-shadow  var(--su-dur-base) var(--su-ease-out),
+              border-color var(--su-dur-base) var(--su-ease-out),
+              color        var(--su-dur-base) var(--su-ease-out);
+  white-space: nowrap;
+}
+.su-btn--primary {
+  background: var(--su-orange);
+  color: var(--su-white);
+  box-shadow: var(--su-glow-orange);
+}
+.su-btn--primary:hover {
+  background: var(--su-orange-dark);
+  color: var(--su-white);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 28px rgba(247, 105, 0, 0.45);
+  text-decoration: none;
+}
+.su-btn--ghost {
+  background: transparent;
+  color: var(--su-white);
+  border-color: rgba(255, 255, 255, 0.35);
+}
+.su-btn--ghost:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--su-orange);
+  color: var(--su-white);
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+/* ── BADGE ───────────────────────────────────────────────────── */
+.su-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.2rem 0.625rem;
+  border-radius: var(--su-radius-pill);
+  font-family: var(--md-text-font);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  background: var(--su-blue-10);  /* #E6E7EE; text navy = 16:1 contrast */
+  color: var(--su-blue);
+  white-space: nowrap;
+}
+.su-badge--accent {
+  background: var(--su-orange-10); /* #FEF0E6; text orange-dark = 5.2:1 */
+  color: var(--su-orange-dark);
+}
+
+/* ── HERO ────────────────────────────────────────────────────── */
+.su-hero {
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: 5rem 2rem;
+  color: var(--su-white);
+}
+
+/* Subtle dot-grid texture on the navy base */
+.su-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: var(--su-blue);
+  background-image: radial-gradient(
+    circle, rgba(255, 255, 255, 0.035) 1px, transparent 1px
+  );
+  background-size: 28px 28px;
+  z-index: 0;
+}
+
+/* Layered gradient overlay: orange top-right radial, blue bottom-left
+   radial, navy linear to deepen the base */
+.su-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at top right,
+      rgba(247, 105, 0, 0.18) 0%, transparent 55%),
+    radial-gradient(ellipse at bottom left,
+      rgba(43, 114, 215, 0.25) 0%, transparent 60%),
+    linear-gradient(180deg,
+      rgba(0, 14, 84, 0.55) 0%, rgba(0, 14, 84, 0.85) 100%);
+  z-index: 1;
+}
+
+.su-hero-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 880px;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+}
+
+/* Staggered page-load reveal (reduced-motion guard at bottom of file) */
+.su-hero-inner > * {
+  opacity: 0;
+  transform: translateY(12px);
+  animation: su-hero-reveal 0.7s var(--su-ease-out) forwards;
+}
+.su-hero-inner > *:nth-child(1) { animation-delay: 0.05s; }
+.su-hero-inner > *:nth-child(2) { animation-delay: 0.12s; }
+.su-hero-inner > *:nth-child(3) { animation-delay: 0.20s; }
+.su-hero-inner > *:nth-child(4) { animation-delay: 0.28s; }
+.su-hero-inner > *:nth-child(5) { animation-delay: 0.36s; }
+
+@keyframes su-hero-reveal {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.su-hero .su-eyebrow {
+  color: var(--su-orange-light);
+  justify-content: center;
+  margin-bottom: var(--sp-5);
+}
+.su-hero .su-eyebrow::before {
+  background: var(--su-orange-light);
+}
+
+/* Override Material's .md-typeset h1 for the hero heading */
+.su-homepage .su-hero h1 {
+  font-family: var(--md-text-font);
+  font-size: clamp(2.5rem, 5.5vw, 4.75rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--su-white);
+  margin: 0 0 var(--sp-4) 0;
+}
+
+/* Gradient accent span inside the hero h1 */
+.su-hero-accent {
+  background: linear-gradient(
+    90deg, var(--su-orange-light) 0%, var(--su-orange) 60%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+
+.su-hero-subhead {
+  font-family: var(--md-text-font);
+  font-size: clamp(1.125rem, 1.6vw, 1.375rem);
+  font-weight: 400;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.92);
+  margin: 0 auto var(--sp-6);
+  max-width: 640px;
+}
+
+.su-hero-ctas {
+  display: flex;
+  gap: var(--sp-4);
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: var(--sp-7);
+}
+
+.su-hero-meta {
+  display: flex;
+  gap: var(--sp-5);
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.60);
+  font-family: var(--md-text-font);
+  font-size: 0.875rem;
+}
+.su-hero-meta-item {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+}
+.su-hero-meta-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--su-orange);
+  box-shadow: 0 0 12px var(--su-orange);
+  animation: su-dot-pulse 2.4s ease-in-out infinite;
+  flex-shrink: 0;
+}
+@keyframes su-dot-pulse {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+@media (max-width: 768px) {
+  .su-hero {
+    padding: 4rem 1.5rem;
+    min-height: auto;
+  }
+  .su-hero-ctas {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .su-hero-ctas .su-btn {
+    justify-content: center;
+  }
+}
+
+/* ── TOOL CARDS ──────────────────────────────────────────────── */
+.su-tools {
+  padding: var(--sp-9) var(--sp-7);
+  background: linear-gradient(
+    180deg, var(--su-white) 0%, var(--su-pale-gray) 100%
+  );
+}
+.su-tools-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.su-tools-header {
+  text-align: center;
+  margin-bottom: var(--sp-8);
+}
+/* Override Material's .md-typeset h2 for the tools section heading */
+.su-homepage .su-tools-header h2 {
+  font-family: var(--md-text-font);
+  font-size: clamp(1.5rem, 2.4vw, 1.875rem);
+  font-weight: 700;
+  color: var(--su-blue);
+  letter-spacing: -0.02em;
+  margin: var(--sp-4) 0 var(--sp-3);
+}
+.su-tools-header > p {
+  font-family: var(--md-text-font);
+  color: var(--su-color-text-muted);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.su-tool-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--sp-5);
+}
+@media (max-width: 980px) {
+  .su-tool-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .su-tool-grid { grid-template-columns: 1fr; }
+  .su-tools     { padding: var(--sp-7) var(--sp-5); }
+}
+
+.su-tool-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: var(--sp-6);
+  background: var(--su-white);
+  border: 1.5px solid var(--su-color-border);
+  border-radius: var(--su-radius-xl);
+  box-shadow: var(--su-shadow-md);
+  text-decoration: none;
+  color: inherit;
+  transition:
+    transform     var(--su-dur-base) var(--su-ease-out),
+    box-shadow    var(--su-dur-base) var(--su-ease-out),
+    border-color  var(--su-dur-base) var(--su-ease-out);
+  overflow: hidden;
+}
+
+/* Orange top-bar slides in from the left on hover */
+.su-tool-card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--su-orange);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--su-dur-base) var(--su-ease-out);
+}
+.su-tool-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(247, 105, 0, 0.25);
+  box-shadow: var(--su-shadow-lg);
+  text-decoration: none;
+  color: inherit;
+}
+.su-tool-card:hover::before {
+  transform: scaleX(1);
+}
+
+/* Featured card: gradient border (Claude) */
+.su-tool-card--featured {
+  border: 2.5px solid transparent;
+  background:
+    linear-gradient(var(--su-white), var(--su-white)) padding-box,
+    var(--su-grad-card-border) border-box;
+  box-shadow: 0 4px 24px rgba(247, 105, 0, 0.12), var(--su-shadow-md);
+}
+.su-tool-card--featured:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--su-shadow-accent);
+}
+
+.su-tool-card-header {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-4);
+  margin-bottom: var(--sp-4);
+}
+.su-tool-card-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background: var(--su-pale-gray);
+  color: var(--su-blue);
+  font-family: var(--md-text-font);
+  font-weight: 700;
+  font-size: 1.0625rem;
+  letter-spacing: -0.02em;
+  border: 1px solid var(--su-color-border);
+}
+/* Featured icon: orange gradient background */
+.su-tool-card--featured .su-tool-card-icon {
+  background: var(--su-grad-orange);
+  color: var(--su-white);
+  border-color: transparent;
+  box-shadow: var(--su-glow-orange);
+}
+.su-tool-card-title {
+  font-family: var(--md-text-font);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--su-blue);
+  line-height: 1.3;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  flex-wrap: wrap;
+}
+.su-tool-card-desc {
+  font-family: var(--md-text-font);
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--su-color-text-muted); /* #404040, 9.4:1 on white -- AA */
+  margin: 0 0 var(--sp-5) 0;
+  flex: 1;
+}
+.su-tool-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-3);
+  margin-top: auto;
+  padding-top: var(--sp-4);
+  border-top: 1px solid var(--su-color-border);
+}
+.su-tool-card-meta {
+  display: flex;
+  gap: var(--sp-2);
+  flex-wrap: wrap;
+}
+.su-tool-card-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  font-family: var(--md-text-font);
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--su-orange-dark);
+  text-decoration: none;
+  flex-shrink: 0;
+  transition:
+    gap   var(--su-dur-fast) ease,
+    color var(--su-dur-fast) ease;
+}
+.su-tool-card:hover .su-tool-card-cta {
+  gap: var(--sp-3);
+  color: var(--su-link);
+}
+.su-tool-card-cta svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+/* ── CONTENT BAND ────────────────────────────────────────────── */
+.su-band {
+  padding: var(--sp-9) var(--sp-7);
+  background: var(--su-blue);
+  color: var(--su-white);
+  position: relative;
+  overflow: hidden;
+}
+/* Radial gradient overlays on the navy background */
+.su-band::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 80% 0%,
+      rgba(247, 105, 0, 0.18) 0%, transparent 50%),
+    radial-gradient(ellipse at 20% 100%,
+      rgba(43, 114, 215, 0.20) 0%, transparent 55%),
+    var(--su-grad-blue);
+  z-index: 0;
+}
+.su-band-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+}
+.su-band-block {
+  padding: 0 var(--sp-7);
+}
+.su-band-block:first-child {
+  padding-left: 0;
+  border-right: 1px solid rgba(255, 255, 255, 0.15);
+}
+.su-band-block:last-child {
+  padding-right: 0;
+}
+/* Override Material's .md-typeset h2 for the band headings */
+.su-homepage .su-band-block h2 {
+  font-family: var(--md-text-font);
+  font-size: clamp(1.375rem, 2vw, 1.875rem);
+  font-weight: 700;
+  color: var(--su-white);
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+  margin: var(--sp-4) 0 var(--sp-3) 0;
+}
+.su-band-block p {
+  font-family: var(--md-text-font);
+  font-size: 1rem;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.82);
+  margin: 0 0 var(--sp-5) 0;
+  max-width: 460px;
+}
+@media (max-width: 768px) {
+  .su-band-inner {
+    grid-template-columns: 1fr;
+    gap: var(--sp-7);
+  }
+  .su-band-block { padding: 0; }
+  .su-band-block:first-child {
+    padding-left: 0;
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    padding-bottom: var(--sp-7);
+  }
+  .su-band { padding: var(--sp-7) var(--sp-5); }
+}
+
+/* ── HUB PAGE LIST CARDS ─────────────────────────────────────── */
+/* Styles the "Pages in this section" link list on section hub pages
+   (claude/index.md, gemini/index.md, etc.) as card-style items.
+   COUPLING WARNING: the selector targets the h2 whose id MkDocs
+   derives from the heading text "Pages in this section" (rendered as
+   id="pages-in-this-section"). If the ingest template changes that
+   heading, this styling silently reverts to plain list links --
+   graceful degradation, no build breakage. */
+.md-typeset h2#pages-in-this-section ~ ul {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+.md-typeset h2#pages-in-this-section ~ ul > li {
+  margin: 0;
+  padding: 0;
+}
+.md-typeset h2#pages-in-this-section ~ ul > li::marker {
+  color: transparent;
+}
+.md-typeset h2#pages-in-this-section ~ ul > li > a {
+  display: block;
+  padding: 0.875rem 1.25rem;
+  border: 1.5px solid var(--su-color-border);
+  border-radius: var(--su-radius-md);
+  background: var(--su-white);
+  color: var(--su-blue);
+  text-decoration: none;
+  font-family: var(--md-text-font);
+  font-weight: 600;
+  font-size: 0.9375rem;
+  box-shadow: var(--su-shadow-sm);
+  transition:
+    border-color var(--su-dur-fast) ease,
+    box-shadow   var(--su-dur-fast) ease,
+    transform    var(--su-dur-fast) ease,
+    color        var(--su-dur-fast) ease;
+}
+.md-typeset h2#pages-in-this-section ~ ul > li > a:hover {
+  border-color: var(--su-blue);
+  box-shadow: var(--su-shadow-md);
+  transform: translateY(-2px);
+  text-decoration: none;
+  color: var(--su-blue);
+}
+
+/* ── REDUCED MOTION GUARD ────────────────────────────────────── */
+/* Disables hero-reveal and dot-pulse animations for users who have
+   set their OS accessibility preference to reduce motion.        */
+@media (prefers-reduced-motion: reduce) {
+  .su-hero-inner > *,
+  .su-hero-meta-dot {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
