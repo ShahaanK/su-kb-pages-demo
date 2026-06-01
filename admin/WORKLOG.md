@@ -1,23 +1,71 @@
 # WORKLOG.md
 
+## 2026-06-01 - M3.T1/T2: Clementine styling + robots.txt fix (Shahaan)
+
+**Context**: Replacing the placeholder CSS stub with real design tokens extracted from
+clementine.syr.edu/site.css, and wiring the SU-branded header/footer overrides in MkDocs Material.
+
+**Work Completed**:
+- Fetched live clementine.syr.edu/site.css; extracted exact design tokens: Sherman Sans
+  @font-face (assets.syracuse.edu CDN), full SU palette (#000E54 navy, #F76900 orange,
+  #D74100 orange-dark), link, heading, and layout values
+- Replaced docs/assets/css/syr.css with real tokens: @font-face for Sherman Sans
+  (400/400i/700), all SU CSS custom properties, Material --md-* overrides (navy primary,
+  orange accent, #C44200 AA-safe body links -- clementine's #D74100 is 4.4:1, just under AA)
+- Saved SU horizontal orange logo SVG locally to docs/assets/images/
+- Updated mkdocs.yml: font: false (stops Google Fonts Roboto load), logo,
+  homepage: https://www.syracuse.edu (logo links to SU homepage via Material's built-in key)
+- Rewrote overrides/main.html: SU skip link as first focusable element (targets #main-content),
+  content anchor span, 3-column SU footer (brand + Resources + Policies) matching clementine
+  exactly; Material's prev/next page nav preserved via {{ super() }}
+- H2/H3: Sherman Serif (Georgia fallback) + navy, matching clementine's section heading
+  treatment; H1: Sherman Sans bold; H4-H6: Sherman Sans
+- Fixed docs/robots.txt Sitemap host: EXAMPLE -> shahaank (matches site_url in mkdocs.yml)
+- Replaced 75 em-dashes across 12 ingested docs files with single dash per corrected rule
+- Updated CLAUDE.md em-dash rule: use ` - ` (not ` -- `)
+- mkdocs build --strict: clean; 15/15 structural checks pass
+
+**Impact**: KB site reads as a Syracuse University product - navy header with SU orange
+wordmark linking to syracuse.edu, 3-column navy footer matching clementine, Sherman Sans
+body + Georgia serif H2s, WCAG-AA-compliant link colors. M3.T2 complete; M3.T1 pending
+visual confirmation (mkdocs serve + Sherman Sans CORS check + Lighthouse).
+
+**Next Steps**: Run mkdocs serve; check Network tab for Sherman Sans 200s (self-host if 403);
+visual compare to clementine; Lighthouse accessibility >= 95; then push
+
+---
+
 ## 2026-06-01 - M2.T9: Confluence hierarchy restructure -- live write and verified (Shahaan)
 
 **Context**: Restructuring the flat docs/itsai/ layout to mirror the Confluence page tree: AI@SU root, five generated section hubs (claude/, gemini/, clementine-platform/, copilot/, example-uses/), and all 29 real pages nested under their sections.
 
+**Taxonomy Decisions**:
+- AI and AI-General-Information phantom containers collapsed -- both were empty (0 words) and not in the published page set; their children promoted to the root level or to their nearest named section
+- claude/, gemini/, clementine-platform/, copilot/ kept as top-level generated hub sections
+- example-uses/ nested one level deeper under claude/ (faithful Confluence parent)
+- Two test pages excluded by page ID: (Test) Resume Tailor Machine Brain (948797482) and The Workflow (965672963) -- scratch content not fit for the public site
+
 **Work Completed**:
 - Extended PageDoc with 4 hierarchy fields (raw_ancestor_ids, ancestor_slugs, is_section_index, is_space_root); fixed url_path() to return directory URL for index.md pages
 - Rewrote run_ingest.py orchestration: build_hierarchy maps phantom section IDs to slugs, generate_hub_pages synthesizes 5 section landing pages with relative .md child links, stale cleanup removes all old flat files
-- Added EXCLUDED_PAGE_IDS to suppress two test pages (948797482, 965672963) by ID regardless of folder
+- Added EXCLUDED_PAGE_IDS to suppress two test pages by ID regardless of folder
 - Path collision check keyed on str(rel_path()) instead of slug() -- correct for nested directories
 - Dry run validated: 34 total (29 real + 5 hubs), 3 restricted, 2 excluded, 0 failures -- path map matched approved design exactly
 - Live write: 34 files written to nested paths; 29 stale flat files removed
 - mkdocs build --strict: clean pass
 - gen_llms.py + mirror_markdown.py: 35 pages each
 - Fixed gen_llms.py page_url() using sub.as_posix() to emit forward-slash URLs on Windows
+- Pushed to GitHub Pages
 
-**Impact**: ITSAI site now has a real hierarchy: claude/, gemini/, clementine-platform/, copilot/ section hubs with clickable landing pages; example-uses/ nested under claude/. All 34 paths confirmed in site/itsai/. llms.txt URLs corrected for Windows.
+**Problems Identified**:
+- All 5 phantom section containers (Claude, Gemini, Copilot, Clementine Platform, Example Uses) confirmed empty (0 words) -- not real content pages, just Confluence organizational nodes; fetching their bodies would return nothing
+- gen_llms.py page_url() emitted Windows backslashes in nested URLs (pre-existing bug, only surfaced once paths became nested)
 
-**Next Steps**: User review and push to GitHub Pages.
+**Solution Implemented**:
+- Generated hub pages are 100% synthesized (intro paragraph + relative .md child list); no Confluence fetch needed for hub bodies
+- page_url() fixed to use Path.as_posix() for cross-platform URL correctness
+
+**Impact**: ITSAI site live on GitHub Pages with a real hierarchy: claude/, gemini/, clementine-platform/, copilot/ section hubs with clickable landing pages; example-uses/ nested under claude/. Milestone 2 complete.
 
 ---
 

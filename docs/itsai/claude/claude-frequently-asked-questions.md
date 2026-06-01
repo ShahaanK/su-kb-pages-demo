@@ -197,13 +197,13 @@ When Claude executes code through its computer tools (bash, Python, R, etc.), ne
 
 **Why is this restriction in place?**
 
-Claude's code execution environment has access to any data you bring into your conversation—whether through file uploads or connected services like Microsoft 365. Enabling network access would create a risk where code could potentially send sensitive University data to external endpoints. By keeping network access disabled, we ensure that any code Claude runs remains sandboxed and cannot transmit data outside the secure environment.
+Claude's code execution environment has access to any data you bring into your conversation - whether through file uploads or connected services like Microsoft 365. Enabling network access would create a risk where code could potentially send sensitive University data to external endpoints. By keeping network access disabled, we ensure that any code Claude runs remains sandboxed and cannot transmit data outside the secure environment.
 
 **What can I do instead?**
 
 - **Download data first:** If you need to analyze data from an external source, download it to your computer and then upload it to Claude.
 - **Use Claude to write code:** Ask Claude to help you write scripts that you can then run in your own local environment (RStudio, Jupyter, VS Code, etc.) where you have full control over network access.
-- **Web search is still available:** Claude can still search the web and retrieve information conversationally—this restriction only applies to code execution.
+- **Web search is still available:** Claude can still search the web and retrieve information conversationally - this restriction only applies to code execution.
 
 **Will this change in the future?**
 

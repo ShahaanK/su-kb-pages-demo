@@ -38,7 +38,7 @@ a separate repo (`su-kb-mcp`); see `scripts/ingest/INTEGRATION.md`.
    an unresolved wikilink) is the gate working. Fix or dead-letter the page.
 6. **Do not edit `site_url` in mkdocs.yml or the host in docs/robots.txt.** The
    maintainer sets those.
-7. No em-dashes in docs or commits; use ` -- ` or restructure.
+7. No em-dashes in docs or commits; use ` - ` or restructure.
 
 ## Ingest setup (one-time, local only)
 

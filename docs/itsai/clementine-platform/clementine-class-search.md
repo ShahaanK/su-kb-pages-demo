@@ -1,7 +1,7 @@
 ---
 title: Clementine Class Search
 description: 'Clementine: Class Search is Syracuse University''s AI-powered class
-  search tool — built to help students find the right classes faster, in natural...'
+  search tool  -  built to help students find the right classes faster, in natural...'
 ai_description: Clementine is Syracuse University's AI-powered natural language tool
   for searching classes by topic, interest, and requirements.
 date: '2026-03-11'
@@ -19,7 +19,7 @@ sitemap_exclude: false
 
 # Clementine: Class Search
 
-Clementine: Class Search is Syracuse University's AI-powered class search tool — built to help students find the right classes faster, in natural language.
+Clementine: Class Search is Syracuse University's AI-powered class search tool  -  built to help students find the right classes faster, in natural language.
 
 Instead of navigating complex catalogs or filtering through dropdowns, you just ask. Clementine understands natural language and searches across classes, descriptions, requirements, and more to surface what you're actually looking for.
 
@@ -31,10 +31,10 @@ Instead of navigating complex catalogs or filtering through dropdowns, you just 
 
 ## What Can Clementine Do?
 
-- **Search classes by topic, interest, or need** — Ask things like "show me writing-intensive classes in the humanities" or "what upper-division IST classes are available this fall?"
-- **Find classes that meet specific requirements** — Filter by credits, career level (undergraduate/graduate), academic term, or subject area
-- **Describe a class in plain language** — Get summaries and details without digging through the course catalog
-- **Help you plan ahead** — Explore options before your advising appointment or registration opens
+- **Search classes by topic, interest, or need**  -  Ask things like "show me writing-intensive classes in the humanities" or "what upper-division IST classes are available this fall?"
+- **Find classes that meet specific requirements**  -  Filter by credits, career level (undergraduate/graduate), academic term, or subject area
+- **Describe a class in plain language**  -  Get summaries and details without digging through the course catalog
+- **Help you plan ahead**  -  Explore options before your advising appointment or registration opens
 
 ---
 
@@ -42,9 +42,9 @@ Instead of navigating complex catalogs or filtering through dropdowns, you just 
 
 Clementine is available to all **Syracuse University students** and is especially useful during:
 
-- **Pre-registration planning** — Explore your options before seats fill up
-- **Advising prep** — Come to appointments with a shortlist already in hand
-- **Registration season** — Quickly find classes that fit your schedule and requirements
+- **Pre-registration planning**  -  Explore your options before seats fill up
+- **Advising prep**  -  Come to appointments with a shortlist already in hand
+- **Registration season**  -  Quickly find classes that fit your schedule and requirements
 
 Academic advisors can also use Clementine to assist students during appointments.
 
@@ -68,9 +68,9 @@ To ensure a stable and reliable experience during periods of high demand, Clemen
 
 ## Tips for Getting the Best Results
 
-- **Be specific** — The more context you give, the better the results. "3-credit fall electives in data science" works better than just "data science"
-- **Try different phrasings** — If your first search doesn't land, rephrase and try again
-- **Use it as a starting point** — Clementine helps you explore; always verify final enrollment details in MySlice or with your Academic Advisor.
+- **Be specific**  -  The more context you give, the better the results. "3-credit fall electives in data science" works better than just "data science"
+- **Try different phrasings**  -  If your first search doesn't land, rephrase and try again
+- **Use it as a starting point**  -  Clementine helps you explore; always verify final enrollment details in MySlice or with your Academic Advisor.
 
 ---
 

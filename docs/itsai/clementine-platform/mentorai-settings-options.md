@@ -22,7 +22,7 @@ Use **Settings & Options** to customize how your mentorAI looks, behaves, and in
 
 ## 🧭 **Edit Mentor Overview**
 
-The **Edit Mentor** panel is where you manage and customize every aspect of your mentorAI. Each tab focuses on a different part of your mentor’s behavior, visibility, or capabilities — from basic setup to advanced integrations.
+The **Edit Mentor** panel is where you manage and customize every aspect of your mentorAI. Each tab focuses on a different part of your mentor’s behavior, visibility, or capabilities  -  from basic setup to advanced integrations.
 
 **Available Tabs:**
 
@@ -45,7 +45,7 @@ The **Edit Mentor** panel is where you manage and customize every aspect of your
 
 | **Setting Options** | **Functions, Examples & Tips** |
 | --- | --- |
-| **🧠 Name** | **What it does:** Defines the mentor’s display name — this is how users will identify and search for it.**Example:** *Research & Innovation MentorAI***Tip:** Choose a name that clearly communicates the mentor’s focus area or purpose. |
+| **🧠 Name** | **What it does:** Defines the mentor’s display name  -  this is how users will identify and search for it.**Example:** *Research & Innovation MentorAI***Tip:** Choose a name that clearly communicates the mentor’s focus area or purpose. |
 | **🗒️ Description** | **What it does:** Outlines what the mentor does, who it supports, and how it helps.**Example:** “Supports students in developing creative, well-structured academic and project ideas…”**Tip:** Write in a short paragraph, focusing on the mentor’s *function* and *value* to students. |
 | **🧭 Category** | **What it does:** Groups your mentorAI into a specific domain or topic area, like “AI Assistance,” “Advisor” or “Artificial Intelligence.”**Example:** *AI Assistance* for AIs supporting research, tech, or data-related questions. |
 | **👁️ Who Can View?** | **What it does:** Controls which users can see this mentorAI in the directory.**Options include:**   - **Students:** Visible only to current students - **Administrators:** Visible to staff and admin users - **Anyone:** Publicly accessible |
@@ -56,7 +56,7 @@ The **Edit Mentor** panel is where you manage and customize every aspect of your
 
 ## **🧠 LLM**
 
-The **LLM tab** lets you choose the underlying AI model that powers your mentorAI. Different providers offer their own models — such as **Google's** **Gemini**, **OpenAI’s** **ChatGPT**, and **Anthropic’s Claude** — each with unique strengths and response styles.
+The **LLM tab** lets you choose the underlying AI model that powers your mentorAI. Different providers offer their own models  -  such as **Google's** **Gemini**, **OpenAI’s** **ChatGPT**, and **Anthropic’s Claude**  -  each with unique strengths and response styles.
 
 ⚖️ Why Choose Different LLM Types
 
@@ -71,7 +71,7 @@ The **LLM tab** lets you choose the underlying AI model that powers your mentorA
 - You can switch between models at any time to explore different response styles and performance levels.
 > [!info]
 > 
-> The LLM determines how your mentorAI “thinks” and communicates. Different models may vary in tone, creativity, and depth of reasoning — try different ones to see what works best for your use case.
+> The LLM determines how your mentorAI “thinks” and communicates. Different models may vary in tone, creativity, and depth of reasoning  -  try different ones to see what works best for your use case.
 
 ---
 
@@ -90,7 +90,7 @@ These help users begin a conversation faster by suggesting common or useful ques
 
 > [!info]
 > 
-> **💡 Tip:** Keep suggested prompts short and action-oriented — they work best when they feel like questions the mentor’s intended audience would naturally ask (e.g., “Find sources for my topic” or “Help me summarize this reading”).
+> **💡 Tip:** Keep suggested prompts short and action-oriented  -  they work best when they feel like questions the mentor’s intended audience would naturally ask (e.g., “Find sources for my topic” or “Help me summarize this reading”).
 
 ---
 
@@ -106,18 +106,18 @@ Each safety feature works together to filter, flag, and respond to inappropriate
 Moderation Prompt & Reponse
 
 - **Moderation Prompt:**  
-  Describes what types of *user messages* should be flagged — such as hate speech, discrimination, or personal attacks.
+  Describes what types of *user messages* should be flagged  -  such as hate speech, discrimination, or personal attacks.
 - **Moderation Response:**  
   The message shown to users if their input violates guidelines. It reminds them to stay respectful and may include campus contact info (e.g., *Barnes Center at 315-443-8000* for confidential support).
 Safety Prompt & Reponse
 
 - **Safety Prompt:**  
-  Outlines what types of *AI responses* should be restricted — for example, messages that provide medical, legal, or financial advice.
+  Outlines what types of *AI responses* should be restricted  -  for example, messages that provide medical, legal, or financial advice.
 - **Safety Response:**  
   The message displayed when the AI blocks an unsafe or off-topic question, encouraging users to seek help from appropriate campus resources instead.
 > [!info]
 > 
-> **💡 Tip:** Keep both prompts and responses professional, concise, and student-focused. Together, they create a balanced safety system — filtering inappropriate messages while redirecting students to the right campus support when needed.
+> **💡 Tip:** Keep both prompts and responses professional, concise, and student-focused. Together, they create a balanced safety system  -  filtering inappropriate messages while redirecting students to the right campus support when needed.
 
 ---
 
@@ -218,7 +218,7 @@ The **Embed** section allows you to configure how your mentorAI appears and func
 
 | **Setting** | **Function** | **Notes / Example** |
 | --- | --- | --- |
-| **Advanced CSS** | Lets you style the mentor widget with custom CSS (colors, fonts, borders, etc.). | For advanced customization — ideal for matching SU’s brand style. |
+| **Advanced CSS** | Lets you style the mentor widget with custom CSS (colors, fonts, borders, etc.). | For advanced customization  -  ideal for matching SU’s brand style. |
 | **Icon Selection** | Choose between a default icon or upload a **custom icon** (logo or mascot). | The icon shown in the **Live Preview** at the bottom right corner. |
 | **Mode Selection** | Switch between **Default** and **Advanced** modes. | Default = simple chat only. Advanced = adds tabs like *Summarize*, *Translate*, and *Expand*. |
 | **Who Can View** | Restrict visibility to **Students**, **Administrators**, or **Anyone**. | Most mentors should be set to **Students** (all university members are considered students in MentorAI).Select this option and the “Who Can Chat” option to **Anyone** to allow anonymous users, useful for public or website chatbots.*(Options may change in future updates.)* |
@@ -229,7 +229,7 @@ The **Embed** section allows you to configure how your mentorAI appears and func
 | **Single Sign-On (SSO)** | Integrates with campus authentication so users don’t need to log in separately. | May be used by the IT department. |
 | **Open by Default** | Makes the chat window automatically open when a user loads the page. | Helpful for welcome messages or proactive engagement. |
 | **Show Attachment** | Adds an option to upload or attach files directly in chat. | Ideal for sending PDFs, docs, or screenshots. |
-| **Show Voice Call / Record** | Enables audio interaction — either real-time calling or voice message recording. | Still experimental in many mentor setups. |
+| **Show Voice Call / Record** | Enables audio interaction  -  either real-time calling or voice message recording. | Still experimental in many mentor setups. |
 | **Shareable Link** | Generates a public link to share the chat outside the embedded site. | Useful for testing or sharing with teammates. |
 | **Create Embed** | Finalizes all chosen settings and generates a **code snippet** (HTML `<script>` or `<iframe>`) for embedding on your chosen website. | This is code that a web developer or IT admin can use to add the mentor to a website. |
 

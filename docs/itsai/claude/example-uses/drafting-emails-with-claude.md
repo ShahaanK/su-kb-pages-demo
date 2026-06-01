@@ -1,6 +1,6 @@
 ---
 title: Drafting Emails with Claude
-description: Write clear, professional, and confident emails — fast. Claude helps
+description: Write clear, professional, and confident emails  -  fast. Claude helps
   you compose and refine messages using natural prompts and built-in editing...
 ai_description: Claude can help Syracuse University users draft, compose, and refine
   professional emails quickly using natural language prompts and artifact editing
@@ -18,7 +18,7 @@ robots: index, follow
 sitemap_exclude: false
 ---
 
-Write clear, professional, and confident emails — fast. Claude helps you compose and refine messages using natural prompts and built-in editing tools.
+Write clear, professional, and confident emails  -  fast. Claude helps you compose and refine messages using natural prompts and built-in editing tools.
 
 ## Compose Smarter with Claude
 
@@ -27,14 +27,14 @@ Write clear, professional, and confident emails — fast. Claude helps you compo
 1. **Ask Claude to draft an email in an artifact** (e.g., "Write a professional thank-you email to my professor about career advice. Put it in an artifact.")
    
    - **Important**: Add "put it in an artifact" or "create this as an artifact" to your prompt to ensure the email opens in a separate panel. Otherwise, shorter emails may appear inline in the chat.
-2. **Your email appears in the Artifact panel** — the draft displays in a separate, editable panel on the right side of the screen with easy copy/paste functionality.
+2. **Your email appears in the Artifact panel**  -  the draft displays in a separate, editable panel on the right side of the screen with easy copy/paste functionality.
 3. **Refine your draft** with follow-up prompts like:
    
    - "Make this more formal**.**"
    - "Shorten to 120 words."
    - "Add a line about scheduling a meetin.g"
    - "Make the tone friendlier."
-4. **Copy and send** — Click the copy icon in the Artifact panel, then paste into your email client.
+4. **Copy and send**  -  Click the copy icon in the Artifact panel, then paste into your email client.
 
 ---
 
@@ -97,26 +97,26 @@ Keep the tone professional, brief, and confident (around 120 words). Put it in a
 > 
 > ✅ Be specific about audience and purpose ("professor," "recruiter," "teammate") for better results.
 > 
-> ✏️ Personalize the draft — Claude provides strong structure, but add your own details and voice.
+> ✏️ Personalize the draft  -  Claude provides strong structure, but add your own details and voice.
 > 
-> 💡 Use iterative prompts — After Claude drafts, say "make it more concise" or "add enthusiasm" to refine.
+> 💡 Use iterative prompts  -  After Claude drafts, say "make it more concise" or "add enthusiasm" to refine.
 > 
-> 🔒 Always review before sending — Claude doesn't know your specific schedule, attachments, or recipient details.
+> 🔒 Always review before sending  -  Claude doesn't know your specific schedule, attachments, or recipient details.
 > 
-> 📋 Save frequently used emails — Keep Claude's drafts in a document for templates you use often.
+> 📋 Save frequently used emails  -  Keep Claude's drafts in a document for templates you use often.
 
 note
 ### Keep These in Mind
 
 - **📝 Claude drafts, you decide**: Claude creates the structure and language, but you're responsible for reviewing accuracy, tone, and context before sending.
 - **🚫 Avoid sensitive data**: Never include confidential information, FERPA-protected student details, or personal identifiers when using Claude.
-- **💬 Stay authentic**: Claude helps with structure and clarity — but always personalize your message so it reflects your own voice.
+- **💬 Stay authentic**: Claude helps with structure and clarity  -  but always personalize your message so it reflects your own voice.
 - **📧 No direct email integration**: Unlike some AI tools, Claude doesn't integrate directly with Gmail or Outlook. You'll copy and paste the final draft into your email platform.
 ### Keep These in Mind
 
 - **📝 Claude drafts, you decide**: Claude creates the structure and language, but you're responsible for reviewing accuracy, tone, and context before sending.
 - **🚫 Avoid sensitive data**: Never include confidential information, FERPA-protected student details, or personal identifiers when using Claude.
-- **💬 Stay authentic**: Claude helps with structure and clarity — but always personalize your message so it reflects your own voice.
+- **💬 Stay authentic**: Claude helps with structure and clarity  -  but always personalize your message so it reflects your own voice.
 - **📧 No direct email integration**: Unlike some AI tools, Claude doesn't integrate directly with Gmail or Outlook. You'll copy and paste the final draft into your email platform.
 
 ---

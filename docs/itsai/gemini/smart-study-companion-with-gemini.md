@@ -18,7 +18,7 @@ robots: index, follow
 sitemap_exclude: false
 ---
 
-Transform how you learn with a personalized “Study Gem.” Upload class materials and let Gemini explain difficult concepts, quiz you on topics, and create custom study guides — all from your SU Google account.
+Transform how you learn with a personalized “Study Gem.” Upload class materials and let Gemini explain difficult concepts, quiz you on topics, and create custom study guides  -  all from your SU Google account.
 
 # Create a Personalized Tutor Gem
 
@@ -97,7 +97,7 @@ End the set with a short **‘Review Tip’** suggesting how to use the cards fo
 > 
 > ### **Tips for using Tutor Gem**
 > 
-> - Be specific — tell Gemini what level of detail you need (“college-level summary,” “2-minute explanation,” etc.).
+> - Be specific  -  tell Gemini what level of detail you need (“college-level summary,” “2-minute explanation,” etc.).
 > - Reuse your Study Gem before every exam to keep your learning consistent.
 > - Edit or update your Gem anytime as you add new course content.
 > - Save and share a general “Study Guide Gem” link with classmates (see below).
@@ -133,12 +133,12 @@ note
 
 - Avoid uploading confidential or graded materials.
 - Review AI-generated quizzes for accuracy.
-- Always double-check facts — Gemini is a learning support tool, not a replacement for understanding.
+- Always double-check facts  -  Gemini is a learning support tool, not a replacement for understanding.
 ### **Keep in Mind**
 
 - Avoid uploading confidential or graded materials.
 - Review AI-generated quizzes for accuracy.
-- Always double-check facts — Gemini is a learning support tool, not a replacement for understanding.
+- Always double-check facts  -  Gemini is a learning support tool, not a replacement for understanding.
 
 ---
 

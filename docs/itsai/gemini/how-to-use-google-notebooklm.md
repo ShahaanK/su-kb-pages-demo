@@ -25,7 +25,7 @@ NotebookLM helps you turn your course materials into insight. Upload your class 
 1. Click **“New Notebook.”**
 2. **Add sources**: upload a Google Doc, PDF, or paste a website or YouTube link.
 3. NotebookLM will analyze those files and display a short “Source Guide” with key topics and summaries.
-4. Use the **Ask a Question** box to start chatting — try asking things like:
+4. Use the **Ask a Question** box to start chatting  -  try asking things like:
    
    1. “Summarize this reading in 3 bullet points.”
    2. “Compare the main arguments from each source.”
@@ -35,10 +35,10 @@ NotebookLM helps you turn your course materials into insight. Upload your class 
 > 
 > ### What You Can Do
 > 
-> - 📚 **Summarize Readings** — Create short study notes or overviews of articles and case studies.
-> - 🧩 **Ask Targeted Questions** — The model only uses the materials you upload (not the entire web).
-> - 🪄 **Generate Learning Tools** — In the *Studio* tab, turn your notes into flashcards, study guides, or even an audio recap.
-> - 🤝 **Collaborate** — Share notebooks with teammates or classmates when working on a group project.
+> - 📚 **Summarize Readings**  -  Create short study notes or overviews of articles and case studies.
+> - 🧩 **Ask Targeted Questions**  -  The model only uses the materials you upload (not the entire web).
+> - 🪄 **Generate Learning Tools**  -  In the *Studio* tab, turn your notes into flashcards, study guides, or even an audio recap.
+> - 🤝 **Collaborate**  -  Share notebooks with teammates or classmates when working on a group project.
 
 ---
 
@@ -50,7 +50,7 @@ Find new information fast. Use the **Discover Sources** option to explore truste
 
 !bcb269b8-8af6-480c-88d3-df5498dafade.png⚙️ Configure Chat
 
-Make the AI fit your study style. Under **Chat Settings**, choose between *Guided Learning*, *Default*, or *Custom* response modes — and set replies to be **shorter or longer** depending on how detailed you want explanations to be.  
+Make the AI fit your study style. Under **Chat Settings**, choose between *Guided Learning*, *Default*, or *Custom* response modes  -  and set replies to be **shorter or longer** depending on how detailed you want explanations to be.  
 **💡 Pro Tip:** Using *Guided Learning* is ideal for studying or understanding new material. Use Customize to personalize how NotebookLM responds (e.g, “Explain this like I’m new to the topic”)
 
 !Screenshot 2025-10-24 at 2.34.03 PM.png📝 Save Notes

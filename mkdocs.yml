@@ -22,6 +22,8 @@ theme:
   name: material
   custom_dir: overrides
   language: en
+  logo: assets/images/syr_horizontal_1Line_orange.svg
+  homepage: https://www.syracuse.edu
   features:
     - navigation.tabs
     - navigation.sections
@@ -32,10 +34,8 @@ theme:
     - search.suggest
     - search.highlight
   palette:
-    scheme: default        # color is overridden in assets/css/syr.css
-  font:
-    text: Roboto
-    code: Roboto Mono
+    scheme: default        # colors overridden in assets/css/syr.css
+  font: false              # disables Google Fonts (Roboto); Sherman Sans loaded via @font-face in syr.css
 
 extra_css:
   - assets/css/syr.css

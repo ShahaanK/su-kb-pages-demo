@@ -1,7 +1,7 @@
 ---
 title: AI Research Assistant with Claude
 description: Claude can act as your personal research assistant. Analyze sources,
-  draft outlines, compare research, and explore ideas—all in one place with...
+  draft outlines, compare research, and explore ideas - all in one place with...
 ai_description: Claude is a research assistant tool that helps Syracuse University
   students analyze documents, create outlines, and organize academic research with
   citation sup...
@@ -17,13 +17,13 @@ robots: index, follow
 sitemap_exclude: false
 ---
 
-Claude can act as your personal research assistant. Analyze sources, draft outlines, compare research, and explore ideas—all in one place with enhanced citation support.
+Claude can act as your personal research assistant. Analyze sources, draft outlines, compare research, and explore ideas - all in one place with enhanced citation support.
 
 ## Research Smarter with Claude
 
-1. **Upload documents** (PDFs, Word docs, research articles) or paste text directly into Claude—up to 5 files per conversation.
+1. **Upload documents** (PDFs, Word docs, research articles) or paste text directly into Claude - up to 5 files per conversation.
 2. **Start with a clear prompt** describing what you need (e.g., "Can you summarize findings, extract key quotes, or explain theories in plain language?")
-3. **Use Projects** to organize research by course or topic—upload all your readings once and reference them across multiple conversations.
+3. **Use Projects** to organize research by course or topic - upload all your readings once and reference them across multiple conversations.
 4. **Create Artifacts** for summaries, outlines, and literature reviews that you can edit, refine, and export.
 
 > [!tip]
@@ -91,7 +91,7 @@ For each quote, provide:
 
 📁 Projects (School Accounts)
 
-Upload all your course readings, lecture notes, and research materials to a Project. Claude will remember and reference these materials across all conversations in that Project—no need to re-upload.
+Upload all your course readings, lecture notes, and research materials to a Project. Claude will remember and reference these materials across all conversations in that Project - no need to re-upload.
 
 **Example use:** Create a "PSY 101" Project with your textbook chapters and articles, then ask questions throughout the semester.
 
@@ -121,7 +121,7 @@ Claude generates editable documents, tables, and outlines in a side panel. You c
 
 🎨 Use Styles (Custom Instructions)
 
-Create custom styles that tell Claude how you prefer information formatted—perfect for maintaining consistency across all your research notes and summaries.
+Create custom styles that tell Claude how you prefer information formatted - perfect for maintaining consistency across all your research notes and summaries.
 
 **Try:** Create a style like "Always format summaries with IMRAD structure (Introduction, Methods, Results, and Discussion) and include methodology details."
 
@@ -129,16 +129,16 @@ note
 ### *Keep in Mind*
 
 - **Web search draws from public sources,** not SU's library databases. Always verify through SU Libraries for peer-reviewed sources.
-- **Claude is a research assistant, not a replacement for critical thinking.** Use it to organize, summarize, and explore—but form your own analysis.
+- **Claude is a research assistant, not a replacement for critical thinking.** Use it to organize, summarize, and explore - but form your own analysis.
 - **Always cite original sources.** Claude can help you find and organize information, but proper attribution is your responsibility.
-- **Extended thinking takes longer but goes deeper:** When you need thorough analysis of complex material, extended thinking provides more rigorous reasoning—though it requires extra processing time.
+- **Extended thinking takes longer but goes deeper:** When you need thorough analysis of complex material, extended thinking provides more rigorous reasoning - though it requires extra processing time.
 - **Artifacts are collaborative:** Think of artifacts as living documents you can refine through conversation rather than static outputs.
 ### *Keep in Mind*
 
 - **Web search draws from public sources,** not SU's library databases. Always verify through SU Libraries for peer-reviewed sources.
-- **Claude is a research assistant, not a replacement for critical thinking.** Use it to organize, summarize, and explore—but form your own analysis.
+- **Claude is a research assistant, not a replacement for critical thinking.** Use it to organize, summarize, and explore - but form your own analysis.
 - **Always cite original sources.** Claude can help you find and organize information, but proper attribution is your responsibility.
-- **Extended thinking takes longer but goes deeper:** When you need thorough analysis of complex material, extended thinking provides more rigorous reasoning—though it requires extra processing time.
+- **Extended thinking takes longer but goes deeper:** When you need thorough analysis of complex material, extended thinking provides more rigorous reasoning - though it requires extra processing time.
 - **Artifacts are collaborative:** Think of artifacts as living documents you can refine through conversation rather than static outputs.
 
 ---

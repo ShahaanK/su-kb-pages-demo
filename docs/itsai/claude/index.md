@@ -1,6 +1,6 @@
 ---
 title: Claude
-description: Claude Enterprise at Syracuse University -- setup, connectors, and use
+description: Claude Enterprise at Syracuse University - setup, connectors, and use
   cases.
 ai_description: ''
 date: ''
@@ -20,7 +20,7 @@ Claude Enterprise at Syracuse University gives the SU community access to Anthro
 
 - [Claude - Frequently Asked Questions](claude-frequently-asked-questions.md)
 - [Claude Code Setup](claude-code-setup.md)
-- [Claude Cowork — Overview and Security Considerations](claude-cowork-overview-and-security-considerations.md)
+- [Claude Cowork  -  Overview and Security Considerations](claude-cowork-overview-and-security-considerations.md)
 - [Claude Enterprise at Syracuse University](claude-enterprise-at-syracuse-university.md)
 - [Claude Local MCP - Connecting Claude Desktop to Power BI](claude-local-mcp-connecting-claude-desktop-to-power-bi.md)
 - [Connect Claude to M365](connect-claude-to-m365.md)

@@ -23,8 +23,8 @@
 - [✅] M2.T9 — Preserve Confluence hierarchy in published paths; parent pages as section index pages; collapse redundant root (Shahaan)
 
 ### Milestone 3: Styling and Production
-- [ ] M3.T1 — Match clementine.syr.edu styling exactly (Shahaan)
-- [ ] M3.T2 — Resolve site_url placeholder in robots.txt sitemap host (Shahaan)
+- [⏳] M3.T1 — Match clementine.syr.edu styling exactly (Shahaan)
+- [✅] M3.T2 — Resolve site_url placeholder in robots.txt sitemap host (Shahaan)
 - [ ] M3.T3 — Attachment/image handling in the ingest (Shahaan)
 - [ ] M3.T4 — Cutover path to SyracuseUniversity org repo / docs.syr.edu (Shahaan + Aaron)
 - [ ] M3.T5 — Fix sitemap lastmod to use frontmatter date, not build date (Shahaan)
@@ -32,6 +32,10 @@
 ---
 
 ## Changelog
+
+### 2026-06-01 (styling)
+- (Shahaan) ⏳ M3.T1 -- clementine token extraction + full CSS/template implementation complete; pending mkdocs serve visual check + Lighthouse before push
+- (Shahaan) ✅ M3.T2 -- robots.txt Sitemap host fixed: EXAMPLE -> shahaank (matches site_url)
 
 ### 2026-06-01
 - (Shahaan) ✅ M2.T9 -- hierarchy restructure: 34 files (29 real + 5 hubs) written to nested paths; 29 stale flat files removed; mkdocs build --strict clean; gen_llms + mirror_markdown verified; gen_llms.py Windows URL bug fixed

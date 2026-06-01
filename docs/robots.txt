@@ -49,4 +49,4 @@ User-agent: *
 Allow: /
 
 # CHANGE the host before deploy to match site_url in mkdocs.yml
-Sitemap: https://EXAMPLE.github.io/su-kb-pages-demo/sitemap.xml
+Sitemap: https://shahaank.github.io/su-kb-pages-demo/sitemap.xml

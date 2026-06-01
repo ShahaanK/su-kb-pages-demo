@@ -1,5 +1,5 @@
 ---
-title: Claude Cowork — Overview and Security Considerations
+title: Claude Cowork  -  Overview and Security Considerations
 description: '--- Claude Cowork is a feature built into the Claude Desktop application
   that gives Claude the ability to act as an autonomous desktop agent....'
 ai_description: Claude Cowork is an autonomous desktop agent feature in Claude Desktop
@@ -21,7 +21,7 @@ sitemap_exclude: false
 
 ### What is Claude Cowork?
 
-Claude Cowork is a feature built into the Claude Desktop application that gives Claude the ability to act as an autonomous desktop agent. Rather than responding to prompts one message at a time like standard Claude Chat, Cowork can take on complex, multi-step tasks and execute them on your behalf — reading, editing, creating, and organizing files directly on your computer.
+Claude Cowork is a feature built into the Claude Desktop application that gives Claude the ability to act as an autonomous desktop agent. Rather than responding to prompts one message at a time like standard Claude Chat, Cowork can take on complex, multi-step tasks and execute them on your behalf  -  reading, editing, creating, and organizing files directly on your computer.
 
 You point Cowork at a folder on your machine, describe the outcome you want, and Claude makes a plan and works through it step by step. Example use cases include assembling an expense report from a folder of receipt photos, reorganizing a messy downloads folder, drafting documents from source materials, or converting files between formats.
 
@@ -31,7 +31,7 @@ Cowork is built on the same agentic architecture that powers Claude Code, but pa
 
 ### How Does Cowork Differ from Claude Chat?
 
-In standard Claude Chat (what most Syracuse University users access at [claude.ai](http://claude.ai)), Claude responds to your messages conversationally. You upload files, ask questions, and get answers — but Claude does not directly access or modify anything on your computer.
+In standard Claude Chat (what most Syracuse University users access at [claude.ai](http://claude.ai)), Claude responds to your messages conversationally. You upload files, ask questions, and get answers  -  but Claude does not directly access or modify anything on your computer.
 
 Cowork is fundamentally different. When you grant Cowork access to a folder, Claude can autonomously read, write, create, and permanently delete files within that folder. It can also execute code, use browser extensions (Claude in Chrome), and connect to external services through plugins and MCP connectors. It operates more like a digital coworker than a chatbot.
 
@@ -59,19 +59,19 @@ Cowork stores all conversation history locally on the user's machine. This data 
 
 #### 3. Local File System Access Creates Data Exposure Risk
 
-Cowork can read, write, and permanently delete files in any folder a user grants it access to. If a user inadvertently points Cowork at a folder containing sensitive university data — student records, financial documents, credentials, research data — that data could be processed by Cowork with no audit trail and no organizational visibility. The risk is amplified because users may not fully understand the scope of access they are granting.
+Cowork can read, write, and permanently delete files in any folder a user grants it access to. If a user inadvertently points Cowork at a folder containing sensitive university data  -  student records, financial documents, credentials, research data  -  that data could be processed by Cowork with no audit trail and no organizational visibility. The risk is amplified because users may not fully understand the scope of access they are granting.
 
 #### 4. Prompt Injection and Agentic Risk
 
-Because Cowork operates autonomously (reading files, browsing the web, executing code), it is susceptible to prompt injection attacks — where malicious content hidden in a file or website attempts to alter Claude's behavior. Anthropic acknowledges this risk directly, noting that agent safety is still an active area of development. There have been documented real-world incidents, including cases where Cowork accidentally deleted files a user did not intend to be removed.
+Because Cowork operates autonomously (reading files, browsing the web, executing code), it is susceptible to prompt injection attacks  -  where malicious content hidden in a file or website attempts to alter Claude's behavior. Anthropic acknowledges this risk directly, noting that agent safety is still an active area of development. There have been documented real-world incidents, including cases where Cowork accidentally deleted files a user did not intend to be removed.
 
 #### 5. No Granular Admin Controls
 
-During the research preview, Cowork is controlled by a single organization-wide toggle — on or off for everyone. There is no ability to enable Cowork for specific users, roles, or departments. Similarly, plugins installed within Cowork are saved locally to each user's machine and cannot be centrally provisioned or managed by admins. This all-or-nothing approach does not align with our need for role-based access and centralized policy management.
+During the research preview, Cowork is controlled by a single organization-wide toggle  -  on or off for everyone. There is no ability to enable Cowork for specific users, roles, or departments. Similarly, plugins installed within Cowork are saved locally to each user's machine and cannot be centrally provisioned or managed by admins. This all-or-nothing approach does not align with our need for role-based access and centralized policy management.
 
 #### 6. Research Preview Status
 
-Anthropic classifies Cowork as a "research preview" — meaning the feature is still in active development, safety mechanisms are still being hardened, and the product may change significantly. Enabling a research preview feature across an enterprise organization of Syracuse's scale carries inherent risk, particularly given the other concerns listed above.
+Anthropic classifies Cowork as a "research preview"  -  meaning the feature is still in active development, safety mechanisms are still being hardened, and the product may change significantly. Enabling a research preview feature across an enterprise organization of Syracuse's scale carries inherent risk, particularly given the other concerns listed above.
 
 ---
 
@@ -79,9 +79,9 @@ Anthropic classifies Cowork as a "research preview" — meaning the feature is s
 
 Syracuse University users have access to a robust set of Claude capabilities that do not carry the same security concerns:
 
-- **Claude Chat** ([claude.ai](http://claude.ai)) — Full conversational AI with file upload, artifacts, projects, web search, and connectors. Covered by enterprise audit logs and compliance controls.
-- **Claude Code** — Terminal-based agentic coding tool for developers. Available via premium seat purchase. Covered by enterprise audit infrastructure.
-- **Claude API** — Programmatic access for building applications and automations. Available via premium seat purchase.
+- **Claude Chat** ([claude.ai](http://claude.ai))  -  Full conversational AI with file upload, artifacts, projects, web search, and connectors. Covered by enterprise audit logs and compliance controls.
+- **Claude Code**  -  Terminal-based agentic coding tool for developers. Available via premium seat purchase. Covered by enterprise audit infrastructure.
+- **Claude API**  -  Programmatic access for building applications and automations. Available via premium seat purchase.
 
 For more information on these products, see [Understanding Claude Products: Chat, Code, and API](https://shahaank.github.io/su-kb-pages-demo/itsai/claude/understanding-claude-products-chat-code-and-api/).
 

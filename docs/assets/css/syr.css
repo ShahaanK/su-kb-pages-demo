@@ -1,37 +1,271 @@
-/* syr.css -- clementine.syr.edu-inspired starter (Phase 0 STUB)
-   This is intentionally minimal. Phase 1 replaces these values with the
-   real palette/type extracted from clementine.syr.edu. Do not treat the
-   exact hex values here as final brand colors. */
+/* ================================================================
+   syr.css -- Syracuse University brand for MkDocs Material
+   Extracted from clementine.syr.edu/site.css (live, 2026-06-01).
+   Match target: https://clementine.syr.edu
+   ================================================================ */
 
+/* ── SHERMAN SANS (SU brand typeface) ────────────────────────────
+   Loaded from assets.syracuse.edu. If CORS blocks the cross-origin
+   load (check Network tab: any 403 on these files), self-host the
+   woff2 files in docs/assets/fonts/ and update the src URLs here. */
+@font-face {
+  font-family: 'Sherman Sans';
+  src: url('https://assets.syracuse.edu/fonts/shermansans-book.woff2') format('woff2'),
+       url('https://assets.syracuse.edu/fonts/shermansans-book.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Sherman Sans';
+  src: url('https://assets.syracuse.edu/fonts/shermansans-bookitalic.woff2') format('woff2'),
+       url('https://assets.syracuse.edu/fonts/shermansans-bookitalic.woff') format('woff');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Sherman Sans';
+  src: url('https://assets.syracuse.edu/fonts/shermansans-bold.woff2') format('woff2'),
+       url('https://assets.syracuse.edu/fonts/shermansans-bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ── SU DESIGN TOKENS ─────────────────────────────────────────── */
 :root {
-  /* Syracuse Orange (Pantone 1665, approx) as the Material primary */
-  --md-primary-fg-color:        #F76900;
-  --md-primary-fg-color--light: #FF8A33;
-  --md-primary-fg-color--dark:  #C45200;
+  /* Primary palette (from clementine :root) */
+  --su-blue:          #000E54;
+  --su-blue-medium:   #203299;
+  --su-blue-light:    #2B72D7;
+  --su-blue-90:       #1A2665;
+  --su-blue-10:       #E6E7EE;
+  --su-orange:        #F76900;
+  --su-orange-light:  #FF8E00;
+  --su-orange-dark:   #D74100;
+  --su-orange-10:     #FEF0E6;
+  --su-white:         #FFFFFF;
 
-  /* Accent used for links/hover */
-  --md-accent-fg-color:         #C45200;
+  /* Greyscale */
+  --su-gray-dark:     #404040;
+  --su-medium-grey:   #707780;
+  --su-light-grey:    #ADB3B8;
+  --su-xlight-grey:   #EFF0F1;
+  --su-pale-gray:     #F4F5F6;
 
-  /* SU secondary navy, used sparingly */
-  --su-navy: #000E54;
+  /* Body link color.
+     Clementine uses --su-orange-dark (#D74100) which is ~4.4:1 on white,
+     fractionally below the 4.5:1 WCAG AA threshold for normal text.
+     We use #C44200 (~5.1:1 on white) to meet AA without changing brand tone. */
+  --su-link:          #C44200;
+
+  /* ── Material variable overrides ── */
+
+  /* Primary = navy. Drives header bg, nav indicator dots, tab bar. */
+  --md-primary-fg-color:             var(--su-blue);
+  --md-primary-fg-color--light:      var(--su-blue-90);
+  --md-primary-fg-color--dark:       #000A44;
+
+  /* Accent = SU orange. Drives active nav links, search highlight, focus. */
+  --md-accent-fg-color:              var(--su-orange);
+  --md-accent-fg-color--transparent: rgba(247, 105, 0, 0.1);
+
+  /* Body link color (AA-safe dark orange; see note above) */
+  --md-typeset-a-color:              var(--su-link);
+
+  /* Sherman Sans replaces Roboto (font: false in mkdocs.yml stops Google Fonts) */
+  --md-text-font:   'Sherman Sans', Verdana, Geneva, 'Trebuchet MS', sans-serif;
+  --md-code-font:   'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+
+  /* Page surface */
+  --md-default-bg-color:  var(--su-white);
+  --md-default-fg-color:  var(--su-gray-dark);
+
+  /* Code block bg matches --su-pale-gray */
+  --md-code-bg-color:     var(--su-pale-gray);
 }
 
-/* Header bar */
+/* ── HEADER ───────────────────────────────────────────────────── */
+/* Solid navy: the scrolled/solid state from clementine.
+   The glassy glass-blur variant requires a full-bleed hero image
+   behind it; a docs page has a white body, so we use solid navy. */
 .md-header {
-  background-color: var(--md-primary-fg-color);
+  background-color: var(--su-blue);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.08);
 }
 
-/* Footer tone-down to navy for contrast against the orange header */
-.md-footer {
-  background-color: var(--su-navy);
+/* Logo: size the SU horizontal wordmark on the navy bar */
+.md-logo img,
+.md-logo svg {
+  height: 34px;
+  width: auto;
 }
 
-/* Link color in body content */
-.md-typeset a {
-  color: var(--md-accent-fg-color);
-}
-
-/* Tab bar */
+/* ── NAVIGATION TABS ──────────────────────────────────────────── */
+/* Slightly lighter navy creates visual separation between header
+   and the tab bar without departing from the SU navy family. */
 .md-tabs {
-  background-color: var(--md-primary-fg-color--dark);
+  background-color: var(--su-blue-90);
+}
+
+/* ── SKIP LINK ────────────────────────────────────────────────── */
+/* First focusable element per WCAG 2.4.1. Visually hidden until
+   keyboard focus; appears anchored to the top of the viewport. */
+.su-skip-link {
+  position: absolute;
+  top: -100%;
+  left: 16px;
+  z-index: 10000;
+  background: var(--su-orange);
+  color: var(--su-white);
+  padding: 12px 24px;
+  border-radius: 0 0 8px 8px;
+  font-family: var(--md-text-font);
+  font-weight: 700;
+  font-size: 18px;
+  text-decoration: none;
+  transition: top 0.2s;
+}
+.su-skip-link:focus {
+  top: 0;
+  color: var(--su-white);
+}
+.su-skip-link:hover {
+  background: var(--su-orange-dark);
+  color: var(--su-white);
+}
+
+/* ── HEADINGS ─────────────────────────────────────────────────── */
+/* H1: Sherman Sans bold + navy -- clementine's hero page-title treatment */
+.md-typeset h1 {
+  font-family: 'Sherman Sans', Verdana, Geneva, 'Trebuchet MS', sans-serif;
+  color: var(--su-blue);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+/* H2-H3: Sherman Serif (Georgia fallback) + navy -- matches clementine's
+   section heading treatment. Sherman Serif has no @font-face in clementine's
+   CSS either; Georgia is the functional web font for both sites. */
+.md-typeset h2,
+.md-typeset h3 {
+  font-family: 'Sherman Serif', Georgia, 'Times New Roman', serif;
+  color: var(--su-blue);
+  font-weight: 700;
+}
+
+/* H4-H6: Sherman Sans for dense nested content; keep navy for hierarchy */
+.md-typeset h4,
+.md-typeset h5,
+.md-typeset h6 {
+  font-family: 'Sherman Sans', Verdana, Geneva, 'Trebuchet MS', sans-serif;
+  color: var(--su-blue);
+}
+
+/* ── BODY LINKS ───────────────────────────────────────────────── */
+.md-typeset a {
+  color: var(--su-link);
+}
+.md-typeset a:hover {
+  color: var(--su-orange);
+}
+
+/* ── FOCUS RING (matches clementine exactly) ──────────────────── */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid var(--su-orange);
+  outline-offset: 2px;
+}
+
+/* ── MATERIAL FOOTER: suppress branding, keep prev/next nav ───── */
+/* We append our own su-footer; Material's meta block (copyright +
+   "Made with Material") is redundant and visually displaced. */
+.md-footer-meta {
+  display: none;
+}
+.md-footer {
+  background-color: var(--su-blue);
+}
+
+/* ── SU FOOTER (3-column, matches clementine.syr.edu) ─────────── */
+.su-footer {
+  background: var(--su-blue);
+  color: rgba(255, 255, 255, 0.85);
+  padding: 56px 48px 44px;
+  font-family: var(--md-text-font);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.su-footer__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 48px;
+}
+
+/* Brand column: white logo (orange inverted to white) + tagline */
+.su-footer__brand img {
+  height: 32px;
+  width: auto;
+  margin-bottom: 16px;
+  filter: brightness(0) invert(1);
+  display: block;
+}
+.su-footer__brand p {
+  max-width: 280px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+.su-footer__heading {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--su-white);
+  margin: 0 0 14px;
+}
+
+.su-footer__links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.su-footer__links li {
+  margin-bottom: 8px;
+}
+.su-footer__links a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.2s;
+}
+.su-footer__links a:hover {
+  color: var(--su-orange);
+}
+
+/* Responsive: stack footer on narrow viewports */
+@media (max-width: 768px) {
+  .su-footer {
+    padding: 40px 24px 32px;
+  }
+  .su-footer__inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+/* ── CONTENT ANCHOR (skip-link target) ───────────────────────── */
+.su-main-anchor {
+  display: block;
+  position: absolute;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
 }

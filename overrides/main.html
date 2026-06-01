@@ -42,3 +42,64 @@
     </script>
   {% endif %}
 {% endblock %}
+
+{# ── SKIP LINK ──────────────────────────────────────────────────────────────
+   Must be the first focusable element in the DOM (WCAG 2.4.1).
+   Targets #main-content, which is injected at the top of {% block content %}.
+   Styled via .su-skip-link in assets/css/syr.css. #}
+{% block header %}
+  <a href="#main-content" class="su-skip-link">Skip to main content</a>
+  {{ super() }}
+{% endblock %}
+
+{# ── CONTENT ANCHOR ─────────────────────────────────────────────────────────
+   Zero-height, visually hidden anchor so the skip link has a resolve target
+   without wrapping or displacing Material's content layout. #}
+{% block content %}
+  <span id="main-content" class="su-main-anchor" tabindex="-1" aria-hidden="true"></span>
+  {{ super() }}
+{% endblock %}
+
+{# ── FOOTER ─────────────────────────────────────────────────────────────────
+   {{ super() }} keeps Material's prev/next page navigation (.md-footer__inner).
+   Material's footer meta (.md-footer-meta: copyright + "Made with Material")
+   is hidden via CSS in syr.css.
+   The SU 3-column footer is appended after, matching clementine.syr.edu exactly.
+   Tagline adapted for KB context (no em-dashes per CLAUDE.md). #}
+{% block footer %}
+  {{ super() }}
+  <footer class="su-footer" role="contentinfo" aria-label="Syracuse University footer">
+    <div class="su-footer__inner">
+
+      <div class="su-footer__brand">
+        <img
+          src="https://assets.cdn.syr.edu/logos/syr_horizontal_1Line_orange.svg"
+          alt="Syracuse University"
+          width="160"
+          height="31"
+        >
+        <p>Syracuse University ITS AI Knowledge Base - built by Syracuse, for you.</p>
+      </div>
+
+      <div>
+        <h3 class="su-footer__heading">Resources</h3>
+        <ul class="su-footer__links">
+          <li><a href="https://www.syracuse.edu" rel="noopener">Syracuse University</a></li>
+          <li><a href="https://its.syr.edu" rel="noopener">Information Technology Services</a></li>
+          <li><a href="https://answers.syr.edu" rel="noopener">Answers (SU Help)</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="su-footer__heading">Policies</h3>
+        <ul class="su-footer__links">
+          <li><a href="https://answers.atlassian.syr.edu/wiki/x/BoBfNQ" rel="noopener">AI Data &amp; Privacy FAQ</a></li>
+          <li><a href="https://www.syracuse.edu/about/accessibility/" rel="noopener">Accessibility</a></li>
+          <li><a href="https://www.syracuse.edu/about/site/privacy-policy/" rel="noopener">Privacy Policy</a></li>
+          <li><a href="https://its.syr.edu/about-us/information-technology-policies/" rel="noopener">IT Policies</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </footer>
+{% endblock %}

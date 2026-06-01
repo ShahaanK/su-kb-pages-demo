@@ -98,7 +98,7 @@ Keep it concise and scannable."
 > 
 > - Be specific in your prompts: Tell the AI exactly what format or information you need
 > - Ask follow-up questions: "Can you make this more concise?" or "Add deadlines if mentioned"
-> - Edit the output: AI summaries are a starting point—review and adjust for accuracy
+> - Edit the output: AI summaries are a starting point - review and adjust for accuracy
 > - Save your favorite prompts: Create a prompt library for recurring meeting types
 
 ---
@@ -142,7 +142,7 @@ noteaaad2d8a-76ba-4a42-b1e9-bbb9e16b0895
 
 Keep These in Mind:
 
-- AI summaries may miss nuance or context—always review the output
+- AI summaries may miss nuance or context - always review the output
 - Transcription accuracy depends on transcript quality
 - AI tools have limits on file size and text length (though most meeting transcripts fit)
 - For sensitive content, use only approved AI tools per university policy
@@ -151,7 +151,7 @@ When in doubt about data policies, contact ITS or review the AI Guidelines linke
 
 Keep These in Mind:
 
-- AI summaries may miss nuance or context—always review the output
+- AI summaries may miss nuance or context - always review the output
 - Transcription accuracy depends on transcript quality
 - AI tools have limits on file size and text length (though most meeting transcripts fit)
 - For sensitive content, use only approved AI tools per university policy

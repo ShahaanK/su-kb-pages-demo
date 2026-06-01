@@ -1,6 +1,6 @@
 ---
 title: Requesting a Claude Connector
-description: Claude Enterprise supports connectors — integrations that allow Claude
+description: Claude Enterprise supports connectors  -  integrations that allow Claude
   to read from and interact with third-party tools and services you use at...
 ai_description: Syracuse University users can request new Claude Enterprise connectors
   through ITS for integration with third-party work tools and services.
@@ -16,7 +16,7 @@ robots: index, follow
 sitemap_exclude: false
 ---
 
-Claude Enterprise supports connectors — integrations that allow Claude to read from and interact with third-party tools and services you use at work. Some connectors (like Microsoft 365 and Atlassian) are already enabled for all SU users. Others require a review and approval before ITS can enable them university-wide.
+Claude Enterprise supports connectors  -  integrations that allow Claude to read from and interact with third-party tools and services you use at work. Some connectors (like Microsoft 365 and Atlassian) are already enabled for all SU users. Others require a review and approval before ITS can enable them university-wide.
 
 ## What Is a Claude Connector?
 
@@ -29,7 +29,7 @@ Connectors are configured at the organization level by ITS administrators. Once 
 If a tool you use has a Claude connector and you would like ITS to enable it, submit a request to [aihelp@syr.edu](mailto:aihelp@syr.edu) with the following:
 
 1. The connector name and a link to the vendor's connector or MCP documentation
-2. Your business use case — describe how you plan to use the integration and what problem it solves
+2. Your business use case  -  describe how you plan to use the integration and what problem it solves
 3. Confirmation of an SU contract or agreement with the vendor, if applicable
 4. A SOC 2 Type II report from the vendor, or confirmation that you can obtain one
 
