@@ -1,5 +1,51 @@
 # WORKLOG.md
 
+## 2026-06-02 - M3.T1: Homepage restyle - Julian design port (Shahaan)
+
+**Context**: Continuing M3.T1 styling work; porting the visual design from
+julianhernandez2155.github.io/su-kb-site/ onto the MkDocs Material stack
+without switching renderers (his site uses a custom Python renderer).
+
+**Work Completed**:
+- Fetched Julian's full design token set (tokens.css: spacing scale, radius, shadows,
+  motion tokens, gradients) and landing/docpage CSS from GitHub raw; read gen_llms.py
+  and mirror_markdown.py source before any implementation (CLAUDE.md rule 1 compliance)
+- Confirmed script safety: gen_llms.py uses yaml.safe_load (unknown frontmatter keys
+  silently ignored); mirror_markdown.py is a verbatim shutil.copy2 - adding
+  "template: home.html" to frontmatter has zero impact on either script
+- Created overrides/home.html: Material template override extending main.html;
+  overrides content block with full-bleed hero (navy + layered radial gradients,
+  staggered page-load reveal animation, gradient "AI" accent text in h1), 5-card
+  tool grid (Claude featured with gradient border, 4 standard cards with orange
+  top-bar hover effect), and 2-column navy content band with radial overlays
+- Added "template: home.html" to docs/itsai/index.md frontmatter (markdown body
+  unchanged; machine surface unaffected)
+- Appended 658 lines to docs/assets/css/syr.css: extended design tokens (spacing,
+  radius, shadows, motion, gradients, semantic color roles), :has()-based full-bleed
+  Material content column reset, hero/eyebrow/button/badge/card/band CSS, hub page
+  list card treatment (pure CSS targeting h2#pages-in-this-section ~ ul), and
+  prefers-reduced-motion guard for all animations
+- Re-injected #main-content skip anchor in home.html content block (required because
+  overriding the block removes main.html's own injection)
+- Card text color changed from #707780 (4.1:1, fails AA) to #404040 (9.4:1) for
+  card descriptions; all other hero/band colors verified AA or better
+- Confirmed Sherman Sans CORS: assets.syracuse.edu returns HTTP 200 +
+  Access-Control-Allow-Origin: * - no CORS fallback to Verdana
+- Fixed hero stat "34 pages" -> "35 pages" to match corpus count
+- mkdocs build --strict clean; gen_llms.py + mirror_markdown.py both produce 35
+  entries; sitemap and robots.txt unchanged; 25/25 HTML element checks pass
+
+**Impact**: Homepage now has a polished, full-bleed landing experience matching
+Julian's design quality - hero band, tool-card grid with hover effects and a featured
+Claude card, navy content band. Section hub pages (claude/, gemini/, etc.) get
+card-style link treatment for their child-page lists via pure CSS, no ingest change.
+Machine surface untouched. Changes uncommitted pending user push.
+
+**Next Steps**: User to commit and push; visual spot-check of hero full-bleed and
+hub cards in browser; Lighthouse accessibility >= 95 (not run this session)
+
+---
+
 ## 2026-06-01 - M3.T1/T2: Clementine styling + robots.txt fix (Shahaan)
 
 **Context**: Replacing the placeholder CSS stub with real design tokens extracted from

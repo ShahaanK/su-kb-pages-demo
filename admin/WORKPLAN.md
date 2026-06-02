@@ -33,6 +33,9 @@
 
 ## Changelog
 
+### 2026-06-02
+- (Shahaan) ⏳ M3.T1 -- homepage restyle complete (home.html + 658-line CSS additions); Sherman Sans CORS confirmed; build --strict clean; machine surface verified 35 pages; push and Lighthouse pending
+
 ### 2026-06-01 (styling)
 - (Shahaan) ⏳ M3.T1 -- clementine token extraction + full CSS/template implementation complete; pending mkdocs serve visual check + Lighthouse before push
 - (Shahaan) ✅ M3.T2 -- robots.txt Sitemap host fixed: EXAMPLE -> shahaank (matches site_url)
