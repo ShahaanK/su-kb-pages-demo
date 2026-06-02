@@ -18,8 +18,6 @@ robots: index, follow
 sitemap_exclude: false
 ---
 
----
-
 # **What is Local MCP?**
 
 Claude local MCP (Model Context Protocol) is an open-source standard developed by Anthropic that allows the Claude Desktop app to securely connect to, read, and interact with data and tools directly on your local computer, such as files, folders, databases, and APIs. It enables AI-driven automation, allowing Claude to perform actions like editing code, querying local data, or interacting with software tools without leaving your desktop interface.

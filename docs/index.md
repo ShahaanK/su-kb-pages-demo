@@ -13,23 +13,11 @@ robots: "index, follow"
 sitemap_exclude: false
 ---
 
-# Syracuse University ITS -- AI Knowledge Base
+<meta http-equiv="refresh" content="0; url=./itsai/" />
+<link rel="canonical" href="./itsai/" />
 
-> Sample/placeholder content. Real pages are mirrored from the SU `ITSAI`
-> Confluence space by the ingest pipeline. This page exists so the demo
-> site builds and shows the intended structure.
-
-This site mirrors Syracuse University ITS documentation about approved AI
-tools, how to access them, and how to use them in line with university data
-policy. It is published as both human-readable HTML and machine-readable
-Markdown so that search engines, AI assistants, and the SU Claude skill can
-all consume it.
-
-## What you will find here
-
-- **AI Tools** -- guidance on Claude, ChatGPT, and Microsoft Copilot at Syracuse.
-- **Policies** -- what data is and is not allowed in which tools (coming from ingest).
-- **Access** -- how students, faculty, and staff request and enable each tool.
+The SU AI Knowledge Base is at [AI @ Syracuse University](itsai/index.md). If you
+are not redirected automatically, follow the link.
 
 ## For machine readers
 

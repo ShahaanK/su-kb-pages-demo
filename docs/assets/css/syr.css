@@ -916,6 +916,31 @@ textarea:focus-visible,
   color: var(--su-blue);
 }
 
+/* ── VIEW RAW .MD LINK ───────────────────────────────────────── */
+.su-md-source-link {
+  margin-top: 2rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--su-color-border);
+  text-align: right;
+}
+.su-md-source-link__anchor {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3em;
+  font-size: 0.8125rem;
+  color: var(--su-medium-grey);
+  text-decoration: none;
+  font-family: var(--md-text-font);
+}
+.su-md-source-link__anchor::before {
+  content: '\2193';
+  font-size: 0.75rem;
+}
+.su-md-source-link__anchor:hover {
+  color: var(--su-blue-light);
+  text-decoration: underline;
+}
+
 /* ── REDUCED MOTION GUARD ────────────────────────────────────── */
 /* Disables hero-reveal and dot-pulse animations for users who have
    set their OS accessibility preference to reduce motion.        */

@@ -28,12 +28,26 @@
 - [ ] M3.T3 — Attachment/image handling in the ingest (Shahaan)
 - [ ] M3.T4 — Cutover path to SyracuseUniversity org repo / docs.syr.edu (Shahaan + Aaron)
 - [ ] M3.T5 — Fix sitemap lastmod to use frontmatter date, not build date (Shahaan)
+- [✅] M3.T6 — validate_build.py: 9-invariant build gate (counts, degraded entries, frontmatter integrity, body integrity, wikilink leakage, root, robots host, home counts, gen_llms splitter agreement); full and --quick modes (Shahaan)
+- [✅] M3.T7 — Fix split_frontmatter() in gen_llms.py: line-anchored regex; 4 degraded pages repaired (Shahaan)
+- [✅] M3.T8 — Harden check_llms_full in validate_build.py: anchor on Source: not ---; body horizontal rules no longer create false block splits (Shahaan)
+- [✅] M3.T9 — llms.txt quality: .md twin URLs + 6-section grouping (Overview / AI General Information / Claude / Clementine Platform / Copilot / Gemini) (Shahaan)
+- [✅] M3.T10 — Visible "View raw .md" link on all content pages; rel=alternate head link preserved (Shahaan)
+- [✅] M3.T11 — Root redirect (meta-refresh to /itsai/); hide: [toc] on itsai index; homepage count guard comment in home.html (Shahaan)
+- [✅] M3.T12 — Gate wired: CI validation step in deploy.yml; pre-commit hook scripts/hooks/pre-commit (100755); Stop hook .claude/settings.json; --quick verified catching splitter bugs (Shahaan)
 
 ---
 
 ## Changelog
 
 ### 2026-06-02
+- (Shahaan) ✅ M3.T6 -- validate_build.py written with 9 invariants and --quick mode
+- (Shahaan) ✅ M3.T7 -- split_frontmatter() fixed; 4 degraded pages repaired in llms.txt (3 title loss + 1 wrong description field)
+- (Shahaan) ✅ M3.T8 -- check_llms_full hardened to Source: anchor; immune to body --- horizontal rules
+- (Shahaan) ✅ M3.T9 -- llms.txt now links to .md twins; 6-bucket per-tool section grouping
+- (Shahaan) ✅ M3.T10 -- visible "View raw .md" link added to all content pages
+- (Shahaan) ✅ M3.T11 -- root redirect, TOC hide on itsai index, homepage count guard comment
+- (Shahaan) ✅ M3.T12 -- gate wired at CI + pre-commit (100755) + Stop hook; --quick verified catching splitter bugs in ~1s
 - (Shahaan) ⏳ M3.T1 -- homepage restyle complete (home.html + 658-line CSS additions); Sherman Sans CORS confirmed; build --strict clean; machine surface verified 35 pages; push and Lighthouse pending
 
 ### 2026-06-01 (styling)

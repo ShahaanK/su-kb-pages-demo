@@ -1,5 +1,6 @@
 ---
 template: home.html
+hide: [toc]
 title: AI @ Syracuse University
 description: Generative artificial intelligence (AI) tools like Claude by Anthropic,
   Microsoft Copilot and Google Gemini have redefined what it means to work,...

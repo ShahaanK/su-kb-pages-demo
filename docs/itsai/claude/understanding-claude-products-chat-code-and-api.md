@@ -17,8 +17,6 @@ robots: index, follow
 sitemap_exclude: false
 ---
 
----
-
 ### What is Claude Chat?
 
 Claude Chat is the conversational interface you use to talk with Claude directly. It's available through the web at <http://claude.ai> , as well as mobile apps (iOS and Android) and desktop applications. This is where you can have natural conversations with Claude for everyday tasks like writing, analysis, brainstorming, coding help, research, and more.

@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Source-only validation before each commit. Runs in ~1s - no site/ build needed.
+# Catches frontmatter bugs and gen_llms splitter issues before they reach CI.
+#
+# Wire once per checkout:
+#   git config core.hooksPath scripts/hooks
+set -e
+python scripts/validate_build.py --quick

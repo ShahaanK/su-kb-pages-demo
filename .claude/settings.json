@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python",
+            "args": ["scripts/validate_build.py", "--quick"],
+            "timeout": 30
+          }
+        ]
+      }
+    ]
+  }
+}

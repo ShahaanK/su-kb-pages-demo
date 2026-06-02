@@ -58,6 +58,11 @@
 {% block content %}
   <span id="main-content" class="su-main-anchor" tabindex="-1" aria-hidden="true"></span>
   {{ super() }}
+  {% if page and page.canonical_url %}
+  <div class="su-md-source-link">
+    <a href="{{ page.canonical_url }}index.md" class="su-md-source-link__anchor">View raw .md</a>
+  </div>
+  {% endif %}
 {% endblock %}
 
 {# ── FOOTER ─────────────────────────────────────────────────────────────────

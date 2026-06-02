@@ -17,8 +17,6 @@ robots: index, follow
 sitemap_exclude: false
 ---
 
----
-
 ### What is Claude Cowork?
 
 Claude Cowork is a feature built into the Claude Desktop application that gives Claude the ability to act as an autonomous desktop agent. Rather than responding to prompts one message at a time like standard Claude Chat, Cowork can take on complex, multi-step tasks and execute them on your behalf  -  reading, editing, creating, and organizing files directly on your computer.

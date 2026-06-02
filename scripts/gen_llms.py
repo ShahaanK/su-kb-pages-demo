@@ -19,23 +19,29 @@ Design notes
 from __future__ import annotations
 
 import argparse
+import re
 import sys
 from pathlib import Path
 
 import yaml
 
+_FRONTMATTER_RE = re.compile(r"\A---\s*\n(.*?)\n---\s*\n?", re.DOTALL)
+
 
 def split_frontmatter(text: str):
-    """Return (meta: dict, body: str). Tolerates files with no frontmatter."""
-    if text.startswith("---"):
-        parts = text.split("---", 2)
-        if len(parts) >= 3:
-            try:
-                meta = yaml.safe_load(parts[1]) or {}
-            except yaml.YAMLError:
-                meta = {}
-            return (meta if isinstance(meta, dict) else {}), parts[2].lstrip("\n")
-    return {}, text
+    """Return (meta: dict, body: str). Tolerates files with no frontmatter.
+
+    Uses a line-anchored regex so a '---' inside a frontmatter value (e.g. a
+    description that starts with '---') does not break the parse.
+    """
+    m = _FRONTMATTER_RE.match(text)
+    if not m:
+        return {}, text
+    try:
+        meta = yaml.safe_load(m.group(1)) or {}
+    except yaml.YAMLError:
+        meta = {}
+    return (meta if isinstance(meta, dict) else {}), text[m.end():]
 
 
 def page_url(base_url: str, rel: Path) -> str:
@@ -47,6 +53,22 @@ def page_url(base_url: str, rel: Path) -> str:
         sub = stem
     sub_str = "" if str(sub) == "." else f"{sub.as_posix()}/"
     return f"{base_url.rstrip('/')}/{sub_str}"
+
+
+def twin_url(base_url: str, rel: Path) -> str:
+    """Map a docs-relative .md path to its .md twin URL in the built site.
+
+    Mirrors mirror_markdown.py's target_for() logic so the URL matches exactly
+    where the twin lands: non-index pages get a directory slot (bar.md ->
+    bar/index.md); index pages stay in their directory (foo/index.md ->
+    foo/index.md).
+    """
+    stem = rel.with_suffix("")
+    if stem.name == "index":
+        sub = stem.parent
+        sub_str = "" if str(sub) == "." else f"{sub.as_posix()}/"
+        return f"{base_url.rstrip('/')}/{sub_str}index.md"
+    return f"{base_url.rstrip('/')}/{stem.as_posix()}/index.md"
 
 
 def load_site_config(config_path: Path) -> dict:
@@ -75,8 +97,14 @@ def section_for(page) -> str:
     if meta.get("section"):
         return str(meta["section"])
     parts = page["rel"].parts
-    if len(parts) == 1:  # top-level file
+    if len(parts) == 1:  # top-level file (e.g. index.md)
         return "Overview"
+    if parts[0] == "itsai":
+        if len(parts) == 2:
+            if parts[1] == "index.md":  # itsai/index.md - landing page
+                return "Overview"
+            return "AI General Information"  # approved-tools, creative-ai, etc.
+        return parts[1].replace("-", " ").replace("_", " ").title()
     return parts[0].replace("-", " ").replace("_", " ").title()
 
 
@@ -101,7 +129,7 @@ def build_llms_txt(site, pages, base_url) -> str:
             meta = p["meta"]
             title = str(meta.get("title", p["rel"].stem))
             desc = str(meta.get("ai_description") or meta.get("description") or "").strip()
-            url = page_url(base_url, p["rel"])
+            url = twin_url(base_url, p["rel"])
             out.append(f"- [{title}]({url}): {desc}" if desc else f"- [{title}]({url})")
         out.append("")
     return "\n".join(out).rstrip() + "\n"

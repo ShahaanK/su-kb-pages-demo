@@ -1,5 +1,22 @@
 # WORKLOG.md
 
+## 2026-06-02 - LLM surface cleanup: Phases 2-6 complete (Shahaan)
+
+**Context**: Executing PLAN.md - fixing a frontmatter split bug that silently degraded 4 pages in llms.txt, hardening the validator, improving llms.txt quality, and wiring the gate at three levels. Phase 1 (validate_build.py) was delivered before this session; execution started at Phase 2.
+
+**Work Completed**:
+- Phase 2: Fixed split_frontmatter() in gen_llms.py - replaced text.split("---", 2) with a line-anchored regex so --- inside quoted description values no longer breaks the parse. 4 pages affected: 3 with full title degradation (cowork, local-mcp, understanding-products) + Copilot FAQ silently using wrong description field. All 4 repaired. Removed stray leading --- from the 3 source file bodies (same ingest artifact). Hardened check_llms_full in validate_build.py to anchor on "# Title\nSource:" pattern instead of splitting on ---, immune to body horizontal rules.
+- Phase 3: Added twin_url() to gen_llms.py (mirrors mirror_markdown.py's target_for() logic); llms.txt entries now link to .md twins (.../index.md) not HTML directory URLs. Updated section_for() to 6-bucket grouping: Overview (2 landing pages), AI General Information (2 flat itsai/ pages), Claude (17), Clementine Platform (7), Copilot (2), Gemini (5). Total 35.
+- Phase 4: Added visible "View raw .md" link at bottom of each content page via block content in main.html and .su-md-source-link CSS in syr.css. Additive - rel=alternate head link preserved. home.html overrides content block so the hero page is correctly excluded.
+- Phase 5: Replaced placeholder root body with meta-refresh redirect to /itsai/ + rel=canonical; "Sample/placeholder content" removed. Added hide: [toc] to docs/itsai/index.md frontmatter (suppresses orphaned sidebar TOC anchors). Added validator guard comment to home.html badge counts.
+- Phase 6: Added "Validate machine surface" CI step to deploy.yml between .nojekyll and upload-pages-artifact (full mode; non-zero exit blocks deploy). Created scripts/hooks/pre-commit (bash, 100755, --quick mode, ~1s). Wired core.hooksPath locally. Created .claude/settings.json with Stop hook (--quick, 30s timeout). Gate verified: injecting a broken description into a source file produces exit 1 with 2 precise failures.
+
+**Impact**: Full-mode validator passes all 9 invariants: 35 published pages, counts agree across HTML / llms.txt / llms-full.txt / .md twins. llms.txt now has correct titles, descriptions, .md twin URLs, and per-tool section grouping. Gate permanent: CI blocks bad deploys, pre-commit blocks bad commits, Stop hook surfaces quick failures at session end.
+
+**Next Steps**: Push to main; confirm Actions run is green with the "Validate machine surface" step visible.
+
+---
+
 ## 2026-06-02 - M3.T1: Homepage restyle - Julian design port (Shahaan)
 
 **Context**: Continuing M3.T1 styling work; porting the visual design from

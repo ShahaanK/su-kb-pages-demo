@@ -44,6 +44,13 @@ jobs:
       - name: Disable Jekyll post-processing
         run: touch site/.nojekyll
 
+      - name: Validate machine surface
+        run: python scripts/validate_build.py --docs docs --site site --config mkdocs.yml
+        # Non-zero exit blocks the deploy. Invariants: count agreement, no
+        # degraded llms.txt entries, frontmatter integrity, body integrity,
+        # no wikilink leakage, real root, robots host, home counts, gen_llms
+        # splitter agreement.
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
